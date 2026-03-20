@@ -14,15 +14,15 @@ export const metadata: Metadata = buildPageMetadata({
 export default function EquipoPage() {
   return (
     <Container className="py-10 sm:py-14">
-      <SectionHeading eyebrow="Equipo profesional" title="Profesionales que combinan criterio, estética y experiencia" desc="Construimos una percepción premium no sólo desde el diseño, sino también desde el relato del equipo y su forma de acompañar a cada paciente." />
+      <SectionHeading eyebrow="Equipo profesional" title="Profesionales que combinan criterio, estética y experiencia" desc="La propuesta premium de Aura Estética se apoya en un equipo que transmite cercanía, precisión y una mirada personalizada." />
 
       <div className="mt-6 grid gap-6 xl:grid-cols-[0.92fr_1.08fr] xl:items-start">
         <MediaCard
           src="/brand/aesthetic/team-portrait.svg"
-          alt="Retrato editorial de profesional de clínica estética premium"
-          eyebrow="Retratos del staff"
-          title="Sistema listo para headshots reales y consistentes"
-          description="El bloque funciona con retratos verticales del equipo, conservando aire, elegancia y un marco uniforme en desktop y mobile."
+          alt="Retrato editorial del equipo profesional de clínica estética premium"
+          eyebrow="Equipo Aura Estética"
+          title="Resultados armónicos con atención humana"
+          description="Un enfoque sobrio, cálido y profesional para acompañar cada consulta y cada sesión."
           aspectClassName="aspect-[4/5]"
           sizes="(min-width: 1280px) 28vw, (min-width: 768px) 50vw, 100vw"
           className="h-full"
@@ -53,7 +53,7 @@ export default function EquipoPage() {
       </div>
 
       <div className="mt-10 rounded-[32px] border border-black/10 bg-gradient-to-r from-white to-[#f5fbfd] p-5 text-sm text-black/65 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-white/70">
-        Si querés conocernos en persona, podés agendar tu valoración o escribirnos por WhatsApp. La experiencia fue adaptada para transmitir el mismo cuidado que una paciente espera al elegir una clínica estética premium.
+        Si querés conocernos en persona, podés agendar tu valoración o escribirnos por WhatsApp. La experiencia fue diseñada para transmitir el mismo cuidado que una paciente espera al elegir una clínica estética premium.
       </div>
 
       <div className="mt-10 flex flex-wrap gap-2">

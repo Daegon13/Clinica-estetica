@@ -43,10 +43,10 @@ export default function UbicacionPage() {
           <CardContent className="grid gap-5 p-4 sm:p-6">
             <MediaCard
               src="/brand/aesthetic/clinic-interior.svg"
-              alt="Visual de interior luminoso de clínica estética para la sección de ubicación"
-              eyebrow="Clínica e interior"
-              title="La ubicación también se comunica con imagen"
-              description="Este espacio puede reemplazarse por recepción, fachada o interior real sin modificar la estructura del bloque."
+              alt="Interior luminoso y elegante de clínica estética premium"
+              eyebrow="Sede Aura Estética"
+              title="Espacios serenos, claros y bien cuidados"
+              description="Una ambientación pensada para que la visita se sienta cómoda, ordenada y alineada con la promesa de marca."
               aspectClassName="aspect-[16/9]"
               sizes="(min-width: 1280px) 52vw, 100vw"
             />

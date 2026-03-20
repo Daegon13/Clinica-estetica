@@ -14,26 +14,26 @@ export const metadata: Metadata = buildPageMetadata({
 const gallery = [
   {
     src: "/brand/aesthetic/treatment-facial.svg",
-    alt: "Visual de tratamiento facial para clínica estética premium",
-    eyebrow: "Facial",
-    title: "Close-ups con textura y glow",
-    description: "Preparado para sumar peelings, limpiezas, aparatología facial o detalles de aplicación.",
+    alt: "Tratamiento facial premium con estética luminosa",
+    eyebrow: "Faciales",
+    title: "Glow, renovación y textura",
+    description: "Tratamientos orientados a limpiar, iluminar y rejuvenecer con naturalidad.",
     aspectClassName: "aspect-[4/3]"
   },
   {
     src: "/brand/aesthetic/treatment-body.svg",
-    alt: "Visual de tratamiento corporal para clínica estética premium",
-    eyebrow: "Corporal",
-    title: "Sesiones con foco en contorno y bienestar",
-    description: "Admite fotos de cabina, aparatología o trabajo corporal con recortes consistentes.",
+    alt: "Tratamiento corporal premium en entorno sereno",
+    eyebrow: "Corporales",
+    title: "Bienestar y contorno",
+    description: "Protocolos pensados para acompañar definición, confort y percepción de bienestar.",
     aspectClassName: "aspect-[4/3]"
   },
   {
     src: "/brand/aesthetic/clinic-interior.svg",
-    alt: "Visual de interior de clínica estética para acompañar tratamientos",
-    eyebrow: "Cabina y clínica",
-    title: "Espacios que acompañan la promesa premium",
-    description: "Sirve para reforzar el entorno, la higiene visual y la experiencia del recorrido.",
+    alt: "Interior elegante de clínica estética premium",
+    eyebrow: "Clínica",
+    title: "Cabinas e interiores cuidados",
+    description: "Un entorno claro y sobrio que acompaña la experiencia de cada sesión.",
     aspectClassName: "aspect-[4/3]"
   }
 ];
@@ -49,27 +49,26 @@ export default function ServicesPage() {
           <ul className="grid gap-1 text-sm text-black/65 dark:text-white/70">
             <li>• Planes faciales y corporales diseñados según tu objetivo y tu punto de partida.</li>
             <li>• Indicaciones claras antes y después de cada sesión para cuidar el resultado.</li>
-            <li>• Recortes visuales listos para sumar fotos nuevas sin deformaciones ni sensación improvisada.</li>
+            <li>• Una presentación visual más limpia, coherente y alineada a una clínica estética premium.</li>
           </ul>
         </section>
 
         <section className="grid gap-4 rounded-[32px] border border-black/5 bg-white/80 p-5 shadow-soft dark:border-white/10 dark:bg-graphite-900/70 sm:p-6">
           <div className="flex items-center justify-between gap-3">
-            <h2 className="text-sm font-extrabold tracking-wide">Galería de soporte visual</h2>
-            <span className="text-xs text-black/50 dark:text-white/55">Tratamientos, cabina y contexto premium</span>
+            <h2 className="text-sm font-extrabold tracking-wide">Ambientes y tratamientos</h2>
+            <span className="text-xs text-black/50 dark:text-white/55">Rostro, cuerpo y espacios</span>
           </div>
           <div className="grid gap-4 lg:grid-cols-3">
             {gallery.map((item) => (
               <MediaCard key={item.title} {...item} sizes="(min-width: 1024px) 30vw, (min-width: 640px) 48vw, 100vw" />
             ))}
           </div>
-          <p className="text-xs text-black/55 dark:text-white/60">Los assets actuales son livianos y reemplazables. Cuando se sumen WebP finales, la estructura ya conserva proporciones, overlays y espaciados.</p>
         </section>
 
         <section className="grid gap-4">
           <div className="grid gap-2">
             <h2 className="text-xl font-extrabold sm:text-2xl">Listado de tratamientos</h2>
-            <p className="max-w-2xl text-sm text-black/60 dark:text-white/65">Mostramos duración estimada y valores orientativos con una tarjeta más editorial para dar contexto y mantener una percepción premium consistente.</p>
+            <p className="max-w-2xl text-sm text-black/60 dark:text-white/65">Duración estimada, referencia de inversión y una presentación más editorial para que cada propuesta se sienta parte de una misma identidad de marca.</p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -82,9 +81,8 @@ export default function ServicesPage() {
                     <span className="rounded-full border border-white/75 bg-white/80 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-black/45">{index < 3 ? "Destacado" : "Plan"}</span>
                   </div>
                   <div className="absolute inset-x-4 bottom-4 rounded-[24px] border border-white/75 bg-white/80 p-4 backdrop-blur">
-                    <div className="text-[11px] font-black uppercase tracking-[0.2em] text-black/40">Imagen de tratamiento</div>
-                    <div className="mt-2 text-lg font-black tracking-tight text-graphite-950">{s.name}</div>
-                    <p className="mt-2 text-sm leading-6 text-black/65">Soporta fotografía horizontal con <span className="font-semibold">object-cover</span> y mantiene lectura clara en mobile.</p>
+                    <div className="text-lg font-black tracking-tight text-graphite-950">{s.name}</div>
+                    <p className="mt-2 text-sm leading-6 text-black/65">Una propuesta cuidada para acompañar resultados visibles con una experiencia serena y profesional.</p>
                   </div>
                 </div>
                 <CardContent className="grid gap-4">
@@ -113,10 +111,10 @@ export default function ServicesPage() {
           </div>
           <MediaCard
             src="/brand/aesthetic/contact-lounge.svg"
-            alt="Visual premium de recepción y apoyo para CTA de consulta estética"
+            alt="Recepción serena de clínica estética premium"
             eyebrow="Consulta y seguimiento"
-            title="Un CTA acompañado por imágenes coherentes"
-            description="La reserva deja de estar sola: ahora puede convivir con fotos reales de recepción, cabina o experiencia de llegada."
+            title="Una reserva simple, clara y acompañada"
+            description="Desde el primer mensaje hasta tu llegada a clínica, la experiencia busca ser prolija, cálida y confiable."
             aspectClassName="aspect-[4/3]"
             sizes="(min-width: 1024px) 34vw, 100vw"
           />

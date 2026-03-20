@@ -28,10 +28,10 @@ export default function ContactoPage() {
         </div>
         <MediaCard
           src="/brand/aesthetic/contact-lounge.svg"
-          alt="Apoyo visual premium para formulario de contacto de clínica estética"
-          eyebrow="Apoyo visual de contacto"
-          title="Recepción, lounge o detalle de clínica"
-          description="El formulario queda acompañado por un bloque de imagen listo para fotos finales de recepción o experiencia de llegada."
+          alt="Recepción y lounge luminoso de clínica estética premium"
+          eyebrow="Aura Estética"
+          title="Un primer contacto claro, cuidado y sereno"
+          description="La consulta se coordina con una experiencia visual y verbal alineada a una clínica estética de perfil premium."
           aspectClassName="aspect-[4/3]"
           sizes="(min-width: 1024px) 38vw, 100vw"
         />

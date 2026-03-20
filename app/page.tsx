@@ -16,97 +16,70 @@ export const metadata: Metadata = buildPageMetadata({
 const featuredCards = [
   {
     title: "Valoración profesional",
-    desc: "Diagnóstico claro para recomendar sólo lo que tu piel y tus objetivos realmente necesitan."
+    desc: "Analizamos tu piel, tus objetivos y tu contexto para recomendar tratamientos con criterio y naturalidad."
   },
   {
-    title: "Experiencia premium",
-    desc: "Una clínica moderna, luminosa y confiable diseñada para que reservar también se sienta aspiracional."
+    title: "Experiencia luminosa",
+    desc: "Una clínica cuidada en cada detalle: luz suave, tiempos claros y una atención que transmite confianza."
   },
   {
     title: "Seguimiento real",
-    desc: "Antes y después con indicaciones concretas para cuidar resultados y mantener la confianza."
+    desc: "Indicaciones, control de evolución y acompañamiento para sostener resultados con calma y seguridad."
   }
 ];
 
 const processSteps = [
   {
     step: "01",
-    title: "Nos escribís o reservás",
-    desc: "Llegás desde Instagram, WhatsApp o la web y resolvés tu primera consulta sin fricción."
+    title: "Primera consulta",
+    desc: "Nos escribís, te orientamos y coordinamos una valoración que se adapte a tus tiempos."
   },
   {
     step: "02",
-    title: "Hacemos tu valoración",
-    desc: "Analizamos tu caso, escuchamos tus objetivos y armamos un plan personalizado."
+    title: "Plan personalizado",
+    desc: "Definimos un protocolo facial o corporal según tu objetivo, tu piel y tu ritmo de vida."
   },
   {
     step: "03",
-    title: "Tratamos y acompañamos",
-    desc: "Aplicamos el protocolo indicado y te guiamos en cuidados, tiempos y seguimiento."
+    title: "Tratamiento y control",
+    desc: "Realizamos las sesiones y acompañamos el proceso para que cada paso se sienta claro y cuidado."
   }
 ];
 
-const treatmentGallery = [
+const gallery = [
   {
     src: "/brand/aesthetic/treatment-facial.svg",
-    alt: "Imagen editorial de tratamiento facial en clínica estética premium",
-    eyebrow: "Tratamientos faciales",
-    title: "Glow, textura y cuidado visible",
-    description: "Espacio visual listo para reemplazar por close-ups premium de limpieza facial, peelings o rejuvenecimiento.",
+    alt: "Cabina facial luminosa para tratamiento estético premium",
+    title: "Faciales y rejuvenecimiento",
+    description: "Protocolos para glow, textura, hidratación y renovación de la piel.",
     aspectClassName: "aspect-[5/4]"
   },
   {
     src: "/brand/aesthetic/treatment-body.svg",
-    alt: "Imagen editorial de tratamiento corporal con estética premium",
-    eyebrow: "Tratamientos corporales",
-    title: "Contorno, bienestar y protocolo",
-    description: "Soporta imágenes verticales u horizontales de aparatología, cabina o sesiones corporales sin deformaciones.",
+    alt: "Espacio editorial para tratamiento corporal premium",
+    title: "Corporales y contorno",
+    description: "Sesiones enfocadas en bienestar, definición y una experiencia confortable.",
     aspectClassName: "aspect-[5/4]"
   },
   {
     src: "/brand/aesthetic/clinic-interior.svg",
-    alt: "Interior luminoso de clínica estética premium",
-    eyebrow: "Clínica e interior",
-    title: "Luz suave y sensación de orden",
-    description: "Marco visual pensado para reemplazar por recepción, box o detalles del interior manteniendo una lectura premium.",
+    alt: "Interior premium de clínica estética con tonos claros",
+    title: "Clínica y espacios",
+    description: "Ambientes serenos, limpios y coherentes con una atención estética de nivel.",
     aspectClassName: "aspect-[5/4]"
   }
 ];
 
 const beforeAfter = [
   {
-    title: "Rostro luminoso y uniforme",
-    desc: "Formato listo para mostrar piel más cuidada con protocolos personalizados, sin promesas exageradas.",
-    label: "Antes / Después"
+    title: "Luminosidad y uniformidad",
+    metric: "Piel más fresca",
+    desc: "Secuencia ideal para peelings, limpiezas profundas y protocolos de glow."
   },
   {
     title: "Naturalidad en rejuvenecimiento",
-    desc: "Composición adaptable para pares comparativos con foco en armonía, textura y frescura.",
-    label: "Resultados reales"
-  },
-  {
-    title: "Progreso corporal consistente",
-    desc: "Bloque apto para secuencias por etapas, mismas poses y una narrativa visual más profesional.",
-    label: "Seguimiento"
-  }
-];
-
-const supportMedia = [
-  {
-    src: "/brand/aesthetic/team-portrait.svg",
-    alt: "Retrato editorial del equipo profesional de clínica estética",
-    eyebrow: "Equipo profesional",
-    title: "Perfiles listos para fotos reales del staff",
-    description: "Cards con recortes consistentes para headshots o retratos editoriales del equipo.",
-    aspectClassName: "aspect-[4/5]"
-  },
-  {
-    src: "/brand/aesthetic/contact-lounge.svg",
-    alt: "Espacio de recepción y apoyo visual para contacto de clínica estética",
-    eyebrow: "CTA y contacto",
-    title: "Soporte visual para reserva y acompañamiento",
-    description: "Pensado para sumar imágenes de recepción, lounge o detalles del recorrido de la paciente.",
-    aspectClassName: "aspect-[4/3]"
+    metric: "Resultados sutiles",
+    desc: "Comparativas pensadas para mostrar mejora sin perder identidad ni expresión."
   }
 ];
 
@@ -127,16 +100,30 @@ export default function HomePage() {
               <LeadCTA interest="general" label="Hablá por WhatsApp" variant="outline" />
               <LinkButton href="/contacto" variant="outline">Reservá tu consulta</LinkButton>
             </div>
+            <div className="grid gap-3 pt-2 sm:grid-cols-3">
+              <div className="rounded-[24px] border border-black/10 bg-white/70 px-4 py-3 shadow-soft">
+                <div className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">Tratamientos</div>
+                <div className="mt-1 text-lg font-black text-graphite-950">Faciales y corporales</div>
+              </div>
+              <div className="rounded-[24px] border border-black/10 bg-white/70 px-4 py-3 shadow-soft">
+                <div className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">Atención</div>
+                <div className="mt-1 text-lg font-black text-graphite-950">WhatsApp y seguimiento</div>
+              </div>
+              <div className="rounded-[24px] border border-black/10 bg-white/70 px-4 py-3 shadow-soft">
+                <div className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">Ubicación</div>
+                <div className="mt-1 text-lg font-black text-graphite-950">{BRAND.city}</div>
+              </div>
+            </div>
             <div className="text-xs text-black/45 dark:text-white/55">Contacto: {BRAND.phone} · {BRAND.address} · {BRAND.hours}</div>
           </div>
 
           <div className="grid gap-4 lg:pl-4">
             <MediaCard
               src="/brand/aesthetic/hero-clinic.svg"
-              alt="Visual editorial de clínica estética premium preparado para reemplazar por fotografía de hero"
-              eyebrow="Hero principal"
-              title="Un hero limpio, premium y listo para nueva fotografía"
-              description="La estructura admite imágenes luminosas de clínica, close-ups editoriales o retratos sin romper proporciones ni overlays."
+              alt="Clínica estética premium con ambientación luminosa y calma visual"
+              eyebrow="Aura Estética"
+              title="Una experiencia de belleza serena, precisa y contemporánea"
+              description="Tratamientos personalizados, interiores luminosos y un recorrido pensado para que te sientas segura desde el primer contacto."
               priority
               sizes="(min-width: 1024px) 46vw, (min-width: 640px) 92vw, 100vw"
               aspectClassName="aspect-[16/11]"
@@ -151,9 +138,9 @@ export default function HomePage() {
                   <div className="mt-3 max-w-xl text-sm text-white/70">{HERO.quickSummaryFoot}</div>
                 </div>
                 <div className="grid gap-2 text-xs text-white/60 sm:text-right">
-                  <span>• Visuales WebP o SVG livianos</span>
-                  <span>• Recortes consistentes en desktop y mobile</span>
-                  <span>• Overlays suaves para una lectura premium</span>
+                  <span>• Valoración con criterio profesional</span>
+                  <span>• Resultados armónicos y naturales</span>
+                  <span>• Atención clara de inicio a seguimiento</span>
                 </div>
               </div>
             </Card>
@@ -162,29 +149,36 @@ export default function HomePage() {
       </div>
 
       <Container className="py-10 sm:py-14">
-        <SectionHeading eyebrow="Sistema visual" title="Áreas preparadas para reemplazar imágenes sin perder identidad premium" desc="El sitio ahora organiza hero, tratamientos, clínica, equipo, contacto y antes/después con recortes consistentes, overlays suaves y composiciones listas para assets finales." />
+        <SectionHeading eyebrow="Clínica · tratamientos · experiencia" title="Una identidad visual sobria, luminosa y coherente en cada sección" desc="El sitio presenta una narrativa más editorial para tratamientos, espacios e imagen de marca, manteniendo un layout preparado para fotografía final sin hablar de la maqueta." />
         <div className="mt-8 grid gap-4 lg:grid-cols-3">
-          {treatmentGallery.map((item) => (
-            <MediaCard key={item.title} {...item} sizes="(min-width: 1024px) 30vw, (min-width: 640px) 48vw, 100vw" />
+          {gallery.map((item) => (
+            <MediaCard
+              key={item.title}
+              src={item.src}
+              alt={item.alt}
+              title={item.title}
+              description={item.description}
+              sizes="(min-width: 1024px) 30vw, (min-width: 640px) 48vw, 100vw"
+              aspectClassName={item.aspectClassName}
+            />
           ))}
         </div>
       </Container>
 
       <Container className="py-10 sm:py-14">
-        <SectionHeading eyebrow="Tratamientos destacados" title="Una selección coherente para una clínica estética premium" desc="Cada tratamiento se presenta con una tarjeta más limpia, mejor jerarquía visual y espacio pensado para futuros shootings editoriales o assets de cabina." />
+        <SectionHeading eyebrow="Tratamientos destacados" title="Cuidado facial y corporal con una estética limpia y contemporánea" desc="Cada tratamiento se presenta con mejor jerarquía, más aire visual y un marco sobrio para futuras imágenes editoriales o de cabina." />
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service, index) => (
             <Card key={service.id} className="overflow-hidden border border-black/10 bg-white/95">
               <div className="relative aspect-[4/3] overflow-hidden border-b border-black/5 bg-gradient-to-br from-[#fff5f9] via-white to-[#eef8fb]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(233,191,209,0.28),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(174,221,235,0.32),transparent_30%)]" />
                 <div className="absolute inset-x-5 top-5 flex items-center justify-between gap-3">
-                  <Badge className="bg-white/80 text-graphite-950 shadow-sm" tone="neutral">{service.name}</Badge>
-                  <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-black/45">{index < 3 ? "Top" : "Premium"}</span>
+                  <Badge className="bg-white/80 text-graphite-950 shadow-sm" tone="neutral">{service.category}</Badge>
+                  <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-black/45">{index < 3 ? "Selección" : "Especializado"}</span>
                 </div>
                 <div className="absolute inset-x-5 bottom-5 rounded-[24px] border border-white/70 bg-white/78 p-4 backdrop-blur">
-                  <div className="text-[11px] font-black uppercase tracking-[0.2em] text-black/45">Tratamiento</div>
-                  <div className="mt-2 text-lg font-black tracking-tight text-graphite-950">{service.name}</div>
-                  <p className="mt-2 text-sm leading-6 text-black/65">Espacio preparado para sumar fotografía editorial, aparatología o detalle de sesión sin comprometer el layout.</p>
+                  <div className="text-lg font-black tracking-tight text-graphite-950">{service.name}</div>
+                  <p className="mt-2 text-sm leading-6 text-black/65">Tratamientos pensados para mejorar textura, luminosidad, contorno y bienestar con una mirada personalizada.</p>
                 </div>
               </div>
               <CardContent className="grid gap-3">
@@ -204,15 +198,28 @@ export default function HomePage() {
         <div className="grid gap-4 rounded-[32px] border border-black/5 bg-white p-5 shadow-soft dark:border-white/10 dark:bg-graphite-900 lg:grid-cols-[1.02fr_0.98fr] lg:p-8">
           <div>
             <div className="text-sm font-extrabold uppercase tracking-[0.18em] text-black/45 dark:text-white/50">Antes y después</div>
-            <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">Resultados que se comunican con deseo, pero también con criterio.</h2>
-            <p className="mt-3 max-w-2xl text-sm text-black/65 dark:text-white/70">La propuesta visual ahora contempla pares comparativos, secuencias de progreso y storytelling clínico sin que parezcan bloques heredados de otra industria.</p>
+            <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">Resultados comunicados con sensibilidad, naturalidad y criterio.</h2>
+            <p className="mt-3 max-w-2xl text-sm text-black/65 dark:text-white/70">La sección ahora acompaña comparativas de evolución con más claridad visual, manteniendo una línea elegante y evitando la estética de promoción agresiva.</p>
           </div>
           <div className="grid gap-3">
-            {beforeAfter.map((item) => (
-              <div key={item.title} className="rounded-[24px] border border-black/10 bg-gradient-to-r from-[#fff8fb] to-[#f5fbfd] p-4 text-sm text-black/70 dark:border-white/10 dark:bg-white/5 dark:text-white/75">
-                <div className="text-[11px] font-black uppercase tracking-[0.2em] text-black/40 dark:text-white/45">{item.label}</div>
-                <div className="mt-1 text-base font-extrabold text-graphite-950 dark:text-white">{item.title}</div>
-                <p className="mt-2 leading-6">{item.desc}</p>
+            {beforeAfter.map((item, index) => (
+              <div key={item.title} className="rounded-[24px] border border-black/10 bg-gradient-to-r from-[#fff8fb] to-[#f5fbfd] p-4 dark:border-white/10 dark:bg-white/5">
+                <div className="grid gap-3 sm:grid-cols-[1fr_1fr_auto] sm:items-center">
+                  <div className="relative overflow-hidden rounded-[20px] border border-white/80 bg-[#f4e7ee] aspect-[5/4]">
+                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.35),rgba(229,205,216,0.8))]" />
+                    <span className="absolute left-3 top-3 rounded-full bg-white/80 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-black/45">Antes</span>
+                  </div>
+                  <div className="relative overflow-hidden rounded-[20px] border border-white/80 bg-[#e9f4f8] aspect-[5/4]">
+                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.2),rgba(194,228,236,0.78))]" />
+                    <span className="absolute left-3 top-3 rounded-full bg-white/80 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-black/45">Después</span>
+                  </div>
+                  <div className="sm:max-w-[190px]">
+                    <div className="text-[11px] font-black uppercase tracking-[0.16em] text-black/40 dark:text-white/45">{item.metric}</div>
+                    <div className="mt-1 text-base font-extrabold text-graphite-950 dark:text-white">{item.title}</div>
+                    <p className="mt-2 text-sm leading-6 text-black/65 dark:text-white/70">{item.desc}</p>
+                  </div>
+                </div>
+                {index === 0 ? <div className="mt-3 text-xs text-black/45 dark:text-white/50">Comparativas sugeridas con mismo ángulo, luz similar y edición suave para una lectura más profesional.</div> : null}
               </div>
             ))}
           </div>
@@ -220,7 +227,7 @@ export default function HomePage() {
       </Container>
 
       <Container className="py-10 sm:py-12">
-        <SectionHeading eyebrow="Cómo trabajamos" title="Un proceso simple para convertir mejor desde Instagram y WhatsApp" desc="La experiencia fue adaptada para captar atención, facilitar la reserva y sostener confianza en cada paso." />
+        <SectionHeading eyebrow="Cómo trabajamos" title="Un proceso simple para reservar, tratar y acompañar" desc="La experiencia fue adaptada para bajar fricción, transmitir serenidad y sostener confianza en cada etapa." />
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {processSteps.map((item) => (
             <Card key={item.step} className="border border-black/10 bg-white/90">
@@ -235,12 +242,17 @@ export default function HomePage() {
       </Container>
 
       <Container className="py-10 sm:py-12">
-        <SectionHeading eyebrow="Equipo profesional" title="Especialistas que sostienen la promesa premium de la marca" desc="El tono del sitio y la estructura comercial ahora acompañan un equipo enfocado en resultados naturales, confianza y experiencia." />
+        <SectionHeading eyebrow="Equipo profesional" title="Especialistas que combinan criterio médico-estético y calidez en la atención" desc="La marca se apoya en un equipo que comunica experiencia, naturalidad y acompañamiento personalizado." />
         <div className="mt-8 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
           <MediaCard
-            {...supportMedia[0]}
+            src="/brand/aesthetic/team-portrait.svg"
+            alt="Retrato editorial del equipo profesional de Aura Estética"
+            eyebrow="Equipo Aura Estética"
+            title="Profesionales enfocados en resultados armónicos"
+            description="Una presencia cálida y sobria para acompañar la promesa premium de la clínica."
             sizes="(min-width: 1024px) 30vw, 100vw"
             className="h-full"
+            aspectClassName="aspect-[4/5]"
           />
           <div className="grid gap-4 sm:grid-cols-2">
             {STAFF.map((person) => (
@@ -257,7 +269,7 @@ export default function HomePage() {
       </Container>
 
       <Container className="py-10 sm:py-12">
-        <SectionHeading eyebrow="Testimonios" title="Prueba social alineada al mundo estético" desc="Microcopy y reseñas adaptadas para transmitir confianza, experiencia y deseo de reservar." />
+        <SectionHeading eyebrow="Testimonios" title="Confianza, contención y una experiencia que se siente cuidada" desc="Reseñas breves para reforzar seguridad, claridad y deseo de reservar." />
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {TESTIMONIALS.map((item) => (
             <Card key={item.name} className="border border-black/10 bg-white/92">
@@ -271,7 +283,7 @@ export default function HomePage() {
       </Container>
 
       <Container className="py-10 sm:py-12">
-        <SectionHeading eyebrow="FAQ" title="Dudas frecuentes antes de reservar" desc="Respuestas concretas para bajar objeciones y ayudar a convertir desde tráfico social." />
+        <SectionHeading eyebrow="FAQ" title="Dudas frecuentes antes de reservar" desc="Respuestas claras para acompañarte antes de tu consulta y ayudarte a decidir con tranquilidad." />
         <div className="mt-8 grid gap-3">
           {FAQS.slice(0, 4).map((item) => (
             <Card key={item.q} className="border border-black/10 bg-white/92">
@@ -287,9 +299,9 @@ export default function HomePage() {
       <Container className="py-10 sm:py-14">
         <div className="grid gap-4 rounded-[32px] bg-graphite-950 p-6 text-white shadow-soft sm:p-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
           <div className="max-w-3xl">
-            <div className="text-sm font-bold uppercase tracking-[0.18em] text-white/50">CTA final</div>
-            <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-4xl">Lista para verte, sentirte bien y empezar tu tratamiento con acompañamiento real.</h2>
-            <p className="mt-3 text-sm text-white/75 sm:text-base">Aura Estética quedó adaptada para una demo comercial premium: identidad visual consistente, zonas de imagen listas para recambio total de assets y canales directos hacia consulta y WhatsApp.</p>
+            <div className="text-sm font-bold uppercase tracking-[0.18em] text-white/50">Reservá tu experiencia</div>
+            <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-4xl">Tu primera consulta puede ser el comienzo de un cambio sutil, cuidado y bien acompañado.</h2>
+            <p className="mt-3 text-sm text-white/75 sm:text-base">Coordiná tu valoración, conocé los tratamientos indicados para vos y resolvé dudas con un equipo que prioriza naturalidad, criterio y experiencia.</p>
             <div className="mt-6 flex flex-wrap gap-2">
               <LinkButton href="/agenda" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Agendá tu valoración</LinkButton>
               <LeadCTA interest="general" label="Hablá por WhatsApp" variant="outline" />
@@ -297,7 +309,11 @@ export default function HomePage() {
             </div>
           </div>
           <MediaCard
-            {...supportMedia[1]}
+            src="/brand/aesthetic/contact-lounge.svg"
+            alt="Recepción luminosa y serena de clínica estética premium"
+            eyebrow="Recepción y contacto"
+            title="Un entorno cuidado desde la llegada"
+            description="Detalles visuales sobrios para acompañar la experiencia de reserva y bienvenida en clínica."
             sizes="(min-width: 1024px) 34vw, 100vw"
             className="border-white/10 bg-white/5"
             overlay="light"
