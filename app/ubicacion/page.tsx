@@ -5,6 +5,7 @@ import { LeadCTA } from "@/components/LeadCTA";
 import { Container, Card, CardContent, CardHeader, Badge, LinkButton } from "@/components/ui";
 import { BRAND } from "@/lib/data";
 import { buildPageMetadata } from "@/lib/seo";
+import { MediaCard } from "@/components/brand/media-card";
 
 export const metadata: Metadata = buildPageMetadata({
   title: `Ubicación y contacto | ${BRAND.name}`,
@@ -24,7 +25,7 @@ export default function UbicacionPage() {
   const mapsEmbed = `https://www.google.com/maps?q=${mapsQuery}&z=16&output=embed`;
 
   return (
-    <Container className="py-10">
+    <Container className="py-10 sm:py-14">
       <SectionHeading eyebrow="Ubicación · contacto · horarios" title="Una sede pensada para una experiencia estética premium" desc="Toda la información clave para reservar, llegar con tranquilidad y mantener contacto directo con la clínica." />
       <div className="mt-8 grid gap-4 xl:grid-cols-[1.05fr_0.95fr]">
         <Card className="overflow-hidden border border-black/10 bg-gradient-to-br from-white via-white to-cyanSoft-50/60">
@@ -40,6 +41,15 @@ export default function UbicacionPage() {
             </div>
           </CardHeader>
           <CardContent className="grid gap-5 p-4 sm:p-6">
+            <MediaCard
+              src="/brand/aesthetic/clinic-interior.svg"
+              alt="Visual de interior luminoso de clínica estética para la sección de ubicación"
+              eyebrow="Clínica e interior"
+              title="La ubicación también se comunica con imagen"
+              description="Este espacio puede reemplazarse por recepción, fachada o interior real sin modificar la estructura del bloque."
+              aspectClassName="aspect-[16/9]"
+              sizes="(min-width: 1280px) 52vw, 100vw"
+            />
             <div className="grid gap-3 sm:grid-cols-2">{visitHighlights.map(({ icon: Icon, title, description, detail }) => <div key={title} className="rounded-3xl border border-black/10 bg-white p-4 shadow-soft"><div className="flex items-start gap-3"><div className="rounded-2xl bg-warm-50 p-3 text-graphite-900 ring-1 ring-black/5"><Icon className="h-5 w-5" /></div><div><div className="text-sm font-bold text-graphite-950">{title}</div><div className="mt-1 text-sm font-medium text-black/75">{description}</div><p className="mt-2 text-sm leading-6 text-black/60">{detail}</p></div></div></div>)}</div>
             <div className="flex flex-wrap gap-2"><LinkButton href={`https://www.google.com/maps/search/?api=1&query=${mapsQuery}`} target="_blank" rel="noreferrer" variant="outline">Abrir en Google Maps</LinkButton><LinkButton href="/agenda" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Agendá tu valoración</LinkButton><LeadCTA interest="general" label="Consultar por WhatsApp" variant="outline" /></div>
           </CardContent>
