@@ -29,7 +29,7 @@ const visitHighlights = [
     icon: CarFront,
     title: "Estacionamiento",
     description: "Hay cocheras privadas y lugares de estacionamiento medido en la misma cuadra.",
-    detail: "Si venís con transportadora o perro grande, suele haber espacios cómodos en horarios de media mañana y primera hora de la tarde."
+    detail: "Suele haber espacios cómodos en horarios de media mañana y primera hora de la tarde."
   },
   {
     icon: Accessibility,
@@ -54,7 +54,7 @@ export default function UbicacionPage() {
       <SectionHeading
         eyebrow="Ubicación"
         title="Una sede cómoda para consultas, controles y atención prioritaria"
-        desc="Te esperamos en una ubicación de acceso simple, con información clara para organizar la visita y llegar con tranquilidad junto a tu mascota."
+        desc="Te esperamos en una ubicación de acceso simple, con información clara para organizar la visita y llegar con tranquilidad."
       />
 
       <div className="mt-8 grid gap-4 xl:grid-cols-[1.05fr_0.95fr]">
@@ -71,7 +71,7 @@ export default function UbicacionPage() {
                 <h2 className="mt-2 text-3xl font-black tracking-tight text-graphite-950">Cómo llegar y qué esperar en tu visita</h2>
                 <p className="mt-3 max-w-2xl text-sm leading-6 text-black/65">
                   Nuestra sede está pensada para resolver consultas clínicas, controles y seguimientos con una experiencia ordenada desde el primer contacto.
-                  Es una zona conocida, práctica para llegar y con opciones cercanas para estacionar o descender con tu mascota.
+                  Es una zona conocida, práctica para llegar y con opciones cercanas para estacionar o descender con comodidad.
                 </p>
               </div>
 

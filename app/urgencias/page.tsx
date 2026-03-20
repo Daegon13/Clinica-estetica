@@ -4,8 +4,8 @@ import { buildPageMetadata } from "@/lib/seo";
 import UrgenciasClientPage from "./urgencias-client-page";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: `Urgencias veterinarias | ${BRAND.name}`,
-  description: `Evaluá síntomas y prioridad de urgencia en ${BRAND.name} para actuar rápido con orientación clara.`,
+  title: `Atención prioritaria | ${BRAND.name}`,
+  description: `Indicá síntomas y obtené una orientación inicial para priorizar la atención en ${BRAND.name}.`,
   path: "/urgencias"
 });
 

@@ -16,7 +16,7 @@ type AgendaItem = {
 
 const AGENDA_PLACEHOLDERS: AgendaItem[] = [
   { id: "placeholder-a", petName: "Luna", service: "Control general", label: "Hoy · 10:30" },
-  { id: "placeholder-b", petName: "Milo", service: "Vacunación", label: "Mañana · 16:00" }
+  { id: "placeholder-b", petName: "Milo", service: "Seguimiento", label: "Mañana · 16:00" }
 ];
 
 function toDateTimeMs(item: Appointment) {
@@ -73,11 +73,11 @@ export function HeroVisual() {
     symptom: getTopTriage(seed.triage)?.symptoms[0] ?? "dificultad para respirar",
     priority: getTopTriage(seed.triage)?.priority.toUpperCase() ?? "ALTA"
   }));
-  const [pet, setPet] = React.useState(() => {
+  const [profile, setProfile] = React.useState(() => {
     const vaccine = getNextVaccine(seed.pet.vaccines);
     return {
       petName: seed.pet.petName,
-      vaccine: vaccine?.name ?? "Séxtuple anual",
+      vaccine: vaccine?.name ?? "Chequeo anual",
       dueLabel: vaccine?.nextDueISO ? `Vence el ${vaccine.nextDueISO}` : "Vence en 5 días"
     };
   });
@@ -114,7 +114,7 @@ export function HeroVisual() {
       const days = Math.ceil((new Date(vaccine.nextDueISO).getTime() - Date.now()) / (1000 * 60 * 60 * 24));
       const dueLabel = days < 0 ? "Vencida" : days === 0 ? "Vence hoy" : `Vence en ${days} días`;
 
-      setPet({
+      setProfile({
         petName: petProfile.petName,
         vaccine: vaccine.name,
         dueLabel
@@ -153,13 +153,13 @@ export function HeroVisual() {
 
         <Card className="min-h-[164px] p-4 transition-transform duration-200 hover:-translate-y-0.5">
           <div className="mb-3 flex items-center justify-between gap-2">
-            <p className="text-xs font-bold uppercase tracking-wide text-black/60 dark:text-white/70">Mi Mascota</p>
-            <Badge tone="warn">Próxima vacuna</Badge>
+            <p className="text-xs font-bold uppercase tracking-wide text-black/60 dark:text-white/70">Mi Perfil</p>
+            <Badge tone="warn">Próximo control</Badge>
           </div>
-          <div className="text-sm font-semibold">{pet.petName}</div>
-          <p className="mt-1 text-xs text-black/65 dark:text-white/70">{pet.vaccine}</p>
-          <p className="mt-1 text-xs font-medium text-black/70 dark:text-white/75">{pet.dueLabel}</p>
-          <Link href="/mi-mascota" className="mt-3 inline-block text-xs font-semibold text-cyanSoft-700 hover:underline dark:text-cyanSoft-300">Ver ficha</Link>
+          <div className="text-sm font-semibold">{profile.petName}</div>
+          <p className="mt-1 text-xs text-black/65 dark:text-white/70">{profile.vaccine}</p>
+          <p className="mt-1 text-xs font-medium text-black/70 dark:text-white/75">{profile.dueLabel}</p>
+          <Link href="/mi-perfil" className="mt-3 inline-block text-xs font-semibold text-cyanSoft-700 hover:underline dark:text-cyanSoft-300">Ver ficha</Link>
         </Card>
       </div>
     </div>

@@ -6,13 +6,13 @@ import { Footer } from "@/components/footer";
 import { DemoBootstrap } from "@/components/demo-bootstrap";
 import { FloatingCta } from "@/components/floating-cta";
 import { ThemeProvider } from "@/components/theme-provider";
-import { BRAND } from "@/lib/data";
+import { BRAND, SEO } from "@/lib/data";
 import { getRobotsMetadata, getSiteUrl } from "@/lib/seo";
 
 const siteUrl = getSiteUrl();
 
-const defaultTitle = `${BRAND.name} — Turnos, urgencias y seguimiento para tu mascota`;
-const defaultDescription = `${BRAND.name} ofrece agenda online, orientación inicial en urgencias y seguimiento por WhatsApp para una atención veterinaria clara y cercana.`;
+const defaultTitle = SEO.defaultTitle;
+const defaultDescription = SEO.defaultDescription;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const localBusinessSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "VeterinaryCare",
+    "@type": "MedicalBusiness",
     name: BRAND.name,
     url: siteUrl
   };

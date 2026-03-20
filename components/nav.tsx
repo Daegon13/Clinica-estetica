@@ -18,7 +18,7 @@ const links = [
   { href: "/servicios", label: "Servicios" },
   { href: "/agenda", label: "Agenda" },
   { href: "/urgencias", label: "Urgencias" },
-  { href: "/mi-mascota", label: "Mi Mascota" },
+  { href: "/mi-perfil", label: "Mi Perfil" },
   { href: "/equipo", label: "Equipo" },
   { href: "/ubicacion", label: "Ubicación" },
   { href: "/faq", label: "FAQ" }
@@ -106,7 +106,7 @@ export function Nav() {
     <div className="sticky top-0 z-30 border-b border-black/5 bg-warm-100/85 text-graphite-900 backdrop-blur dark:border-white/10 dark:bg-graphite-950/85 dark:text-white">
       <Container className="flex h-16 flex-nowrap items-center justify-between gap-3 overflow-hidden">
         <Link href={withDemo("/")} className="flex shrink-0 items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-graphite-900 font-black text-white dark:bg-cyanSoft-400 dark:text-graphite-950">V</span>
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-graphite-900 font-black text-white dark:bg-cyanSoft-400 dark:text-graphite-950">{BRAND.shortName}</span>
           <div className="leading-tight">
             <div className="text-sm font-extrabold tracking-tight">{BRAND.name}</div>
             <div className="-mt-0.5 text-[11px] text-black/55 dark:text-white/65">{BRAND.tagline}</div>

@@ -11,7 +11,7 @@ import { addLead } from "@/lib/leads";
 const SOLUTIONS = [
   "Experiencia clara para clientes: reservas online simples para reducir llamados y ordenar la agenda.",
   "Centralización de consultas: triage guiado y contacto rápido desde un mismo recorrido.",
-  "Flujo adaptable a cada veterinaria: servicios, mensajes y operación ajustados a tu forma de trabajo."
+  "Flujo adaptable a cada clínica: servicios, mensajes y operación ajustados a tu forma de trabajo."
 ];
 
 export default function LandingPage() {
@@ -45,7 +45,7 @@ export default function LandingPage() {
         <section className="grid gap-4 text-center">
           <Badge className="mx-auto w-fit">Demo lista para campañas</Badge>
           <h1 className="text-3xl font-black tracking-tight sm:text-5xl">
-            Convertí anuncios en turnos reales para tu veterinaria.
+            Convertí anuncios en turnos reales para tu clínica.
           </h1>
           <p className="mx-auto max-w-2xl text-sm text-black/65 dark:text-white/70 sm:text-lg">
             Mostrá una propuesta profesional, humana y clara para convertir interés en conversaciones por WhatsApp con intención de reserva.
@@ -82,7 +82,7 @@ Ver recorrido guiado en 3 pasos
 
         <GuidedDemoStrip
           id="demo-rapido"
-          description="Empezá por agenda, seguí con urgencias y cerrá el recorrido en Mi Mascota."
+          description="Empezá por agenda, seguí con urgencias y cerrá el recorrido en Mi Perfil."
         />
       </Container>
     </div>

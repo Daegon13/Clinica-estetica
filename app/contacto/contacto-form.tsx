@@ -12,7 +12,7 @@ import { buildWhatsappUrl, getStoredUtm } from "@/lib/utm";
 
 type ContactFormState = {
   nombre: string;
-  veterinaria: string;
+  organizacion: string;
   ciudad: string;
   contacto: string;
   necesidad: string;
@@ -20,7 +20,7 @@ type ContactFormState = {
 
 const INITIAL_STATE: ContactFormState = {
   nombre: "",
-  veterinaria: "",
+  organizacion: "",
   ciudad: "",
   contacto: "",
   necesidad: ""
@@ -34,9 +34,9 @@ export function ContactoForm() {
   const whatsappUrl = React.useMemo(() => {
     const utm = getStoredUtm();
     const chunks = [
-      "Solicitud de implementación VetCare:",
+      `Solicitud de implementación ${BRAND.name}:`,
       `- Nombre: ${form.nombre || "(sin completar)"}`,
-      `- Veterinaria: ${form.veterinaria || "(sin completar)"}`,
+      `- Clínica / organización: ${form.organizacion || "(sin completar)"}`,
       `- Ciudad: ${form.ciudad || "(sin completar)"}`,
       `- Contacto: ${form.contacto || "(sin completar)"}`,
       `- Necesidad: ${form.necesidad || "(sin completar)"}`
@@ -58,7 +58,7 @@ export function ContactoForm() {
       channel: "implementation_form",
       utm: utm ?? undefined,
       interest: ["implementacion"],
-      note: `Nombre: ${form.nombre} | Veterinaria: ${form.veterinaria} | Ciudad: ${form.ciudad} | Contacto: ${form.contacto} | Necesidad: ${form.necesidad}`
+      note: `Nombre: ${form.nombre} | Organización: ${form.organizacion} | Ciudad: ${form.ciudad} | Contacto: ${form.contacto} | Necesidad: ${form.necesidad}`
     });
 
     trackEvent("implementation_form_submitted", {
@@ -72,50 +72,22 @@ export function ContactoForm() {
   return (
     <form className="grid gap-4" onSubmit={onSubmit}>
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="Nombre y apellido">
-          <Input required name="nombre" value={form.nombre} onChange={(event) => updateField("nombre", event.target.value)} placeholder="Tu nombre" />
-        </Field>
-        <Field label="Veterinaria">
-          <Input required name="veterinaria" value={form.veterinaria} onChange={(event) => updateField("veterinaria", event.target.value)} placeholder="Nombre de la veterinaria" />
-        </Field>
-        <Field label="Ciudad">
-          <Input required name="ciudad" value={form.ciudad} onChange={(event) => updateField("ciudad", event.target.value)} placeholder="Ciudad" />
-        </Field>
-        <Field label="WhatsApp o email">
-          <Input required name="contacto" value={form.contacto} onChange={(event) => updateField("contacto", event.target.value)} placeholder="+598... o correo@dominio.com" />
-        </Field>
+        <Field label="Nombre y apellido"><Input required name="nombre" value={form.nombre} onChange={(event) => updateField("nombre", event.target.value)} placeholder="Tu nombre" /></Field>
+        <Field label="Clínica u organización"><Input required name="organizacion" value={form.organizacion} onChange={(event) => updateField("organizacion", event.target.value)} placeholder="Nombre de la clínica o centro" /></Field>
+        <Field label="Ciudad"><Input required name="ciudad" value={form.ciudad} onChange={(event) => updateField("ciudad", event.target.value)} placeholder="Ciudad" /></Field>
+        <Field label="WhatsApp o email"><Input required name="contacto" value={form.contacto} onChange={(event) => updateField("contacto", event.target.value)} placeholder="+598... o correo@dominio.com" /></Field>
       </div>
 
       <Field label="¿Qué necesitás resolver primero?">
-        <Textarea
-          required
-          name="necesidad"
-          value={form.necesidad}
-          onChange={(event) => updateField("necesidad", event.target.value)}
-          placeholder="Ej: reducir ausencias, ordenar urgencias, mejorar seguimiento comercial..."
-          rows={5}
-        />
+        <Textarea required name="necesidad" value={form.necesidad} onChange={(event) => updateField("necesidad", event.target.value)} placeholder="Ej: reducir ausencias, ordenar reservas, mejorar seguimiento comercial..." rows={5} />
       </Field>
 
       <div className="flex flex-wrap gap-2">
-        <Button type="submit" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">
-          Enviar interés
-        </Button>
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex h-11 items-center rounded-xl border border-black/10 bg-white px-4 text-sm font-semibold text-graphite-900 hover:bg-black/5 dark:border-white/15 dark:bg-graphite-900 dark:text-white dark:hover:bg-white/10"
-        >
-          {COMMERCIAL_IMPLEMENTATION_CTA.secondaryWhatsappLabel}
-        </a>
+        <Button type="submit" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Enviar interés</Button>
+        <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex h-11 items-center rounded-xl border border-black/10 bg-white px-4 text-sm font-semibold text-graphite-900 hover:bg-black/5 dark:border-white/15 dark:bg-graphite-900 dark:text-white dark:hover:bg-white/10">{COMMERCIAL_IMPLEMENTATION_CTA.secondaryWhatsappLabel}</a>
       </div>
 
-      {submitted ? (
-        <div className="rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
-          ¡Gracias! Recibimos tu interés y ya podés continuar por WhatsApp con tu información precargada.
-        </div>
-      ) : null}
+      {submitted ? <div className="rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-800">¡Gracias! Recibimos tu interés y ya podés continuar por WhatsApp con tu información precargada.</div> : null}
     </form>
   );
 }

@@ -40,11 +40,11 @@ export default function OpenGraphImage() {
         <div style={{ marginTop: 22, fontSize: 62, fontWeight: 900, color: "#0b0e11", lineHeight: 1.05 }}>
           Turnos, urgencias y portal
           <br />
-          del cliente — en minutos.
+          del paciente — en minutos.
         </div>
 
         <div style={{ marginTop: 22, fontSize: 26, color: "rgba(0,0,0,0.65)", maxWidth: 900 }}>
-          Agenda online, orientación inicial en urgencias y seguimiento por WhatsApp en una experiencia veterinaria clara.
+          Agenda online, orientación inicial en urgencias y seguimiento por WhatsApp en una experiencia médica privada clara.
         </div>
 
         <div
@@ -58,7 +58,7 @@ export default function OpenGraphImage() {
           {[
             "Agenda inteligente",
             "Triage con prioridad",
-            "Mi Mascota",
+            "Mi Perfil",
             "Panel admin"
           ].map((t) => (
             <div
