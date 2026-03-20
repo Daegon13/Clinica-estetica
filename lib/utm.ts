@@ -116,7 +116,7 @@ export function buildWhatsappUrl(baseWhatsappUrl: string, utm: UTMData | null, e
     return baseWhatsappUrl;
   }
 
-  const baseText = parsed.searchParams.get("text") ?? "Hola, quiero conocer la solución VetCare para mi veterinaria.";
+  const baseText = parsed.searchParams.get("text") ?? "Hola, quiero conocer la solución Clinica Estetica para mi clínica.";
   const details = [extraMessage].filter(Boolean).join(" ").trim();
 
   const utmChunks: string[] = [];
@@ -144,7 +144,7 @@ export function buildLeadWhatsappUrl(baseWhatsappUrl: string, utm: UTMData | nul
   const interest = lead.interes?.join("/") || "sin especificar";
 
   const chunks: string[] = [];
-  chunks.push("Lead VetCare:");
+  chunks.push("Lead Clinica Estetica:");
   if (lead.nombre) chunks.push(`- Nombre: ${lead.nombre}`);
   if (lead.clinica) chunks.push(`- Clínica: ${lead.clinica}`);
   if (lead.ciudad) chunks.push(`- Ciudad: ${lead.ciudad}`);

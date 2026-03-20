@@ -93,11 +93,11 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
   function downloadICS(item: Appointment) {
     const itemService = getService(item.serviceId);
     const ics = makeICS({
-      title: `Turno VetCare — ${SERVICES.find(s => s.id === item.serviceId)?.name ?? "Servicio"}`,
+      title: `Turno Clinica Estetica — ${SERVICES.find(s => s.id === item.serviceId)?.name ?? "Servicio"}`,
       dateISO: item.dateISO,
       time: item.time,
       minutes: itemService.durationMin,
-      description: `Mascota: ${item.petName}\nTitular: ${item.ownerName}\nTel: ${item.phone}${item.notes ? `\nNotas: ${item.notes}` : ""}`,
+      description: `Paciente: ${item.petName}\nContacto: ${item.ownerName}\nTel: ${item.phone}${item.notes ? `\nNotas: ${item.notes}` : ""}`,
       location: BRAND.address
     });
     const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
@@ -158,7 +158,7 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
                   </div>
                   <div className="mt-3 text-sm font-semibold text-graphite-950">{a.petName}</div>
                   <div className="text-sm text-black/65">{SERVICES.find(s => s.id === a.serviceId)?.name}</div>
-                  <div className="mt-1 text-xs text-black/50">Titular: {a.ownerName}</div>
+                  <div className="mt-1 text-xs text-black/50">Contacto: {a.ownerName}</div>
                 </div>
               ))}
             </div>
@@ -265,7 +265,7 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
             <div className="grid gap-3 pt-2">
               <div className="text-sm font-extrabold">Paso 3 — Datos</div>
               <div className="grid gap-3 sm:grid-cols-2">
-                <Field label="Nombre de la mascota">
+                <Field label="Nombre de la paciente">
                   <Input value={petName} onChange={e => setPetName(e.target.value)} placeholder="Ej: Milo" />
                 </Field>
                 <Field label="Tu nombre">
@@ -313,7 +313,7 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
         <Card className="lg:col-span-2">
           <CardHeader>
             <div className="text-sm font-extrabold">Próximos turnos</div>
-            <div className="text-sm text-black/60">Vista rápida para tutor y recepción</div>
+            <div className="text-sm text-black/60">Vista rápida para paciente y recepción</div>
           </CardHeader>
           <CardContent className="grid gap-3">
             <Badge tone="neutral">Agenda visible desde el inicio</Badge>
@@ -326,7 +326,7 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
                   </Badge>
                 </div>
                 <div className="text-sm text-black/70">{SERVICES.find(s => s.id === a.serviceId)?.name} · {a.dateISO} · {a.time}</div>
-                <div className="text-xs text-black/55">Titular: {a.ownerName} · Tel: {a.phone}</div>
+                <div className="text-xs text-black/55">Contacto: {a.ownerName} · Tel: {a.phone}</div>
 
                 <div className="flex flex-wrap gap-2 pt-2">
                   <button

@@ -49,7 +49,7 @@ function getVisibleCases(items: TriageCase[]) {
 
 export default function UrgenciasPage() {
   const [petName, setPetName] = React.useState("");
-  const [species, setSpecies] = React.useState<PetSpecies>("Perro");
+  const [species, setSpecies] = React.useState<PetSpecies>("Adulto");
   const [ownerName, setOwnerName] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [selected, setSelected] = React.useState<string[]>([]);
@@ -113,8 +113,8 @@ export default function UrgenciasPage() {
   }
 
   function speciesAccent(currentSpecies: PetSpecies) {
-    if (currentSpecies === "Gato") return "Paciente felino";
-    if (currentSpecies === "Perro") return "Paciente canino";
+    if (currentSpecies === "Infantil") return "Perfil infantil";
+    if (currentSpecies === "Adulto") return "Perfil adulto";
     return "Paciente en observación";
   }
 
@@ -148,7 +148,7 @@ export default function UrgenciasPage() {
         <Card>
           <CardContent className="grid gap-1 p-5">
             <div className="text-xs font-semibold uppercase tracking-[0.2em] text-black/45">Aclaración clínica</div>
-            <div className="text-base font-bold">Orientación inicial, no reemplaza la revisión veterinaria.</div>
+            <div className="text-base font-bold">Orientación inicial, no reemplaza la revisión clínica.</div>
             <p className="text-sm text-black/65">Si hay dificultad para respirar, sangrado intenso, convulsiones o pérdida de conocimiento, la indicación es acudir de inmediato.</p>
           </CardContent>
         </Card>
@@ -158,20 +158,20 @@ export default function UrgenciasPage() {
         <Card className="lg:col-span-3">
           <CardHeader className="flex items-center justify-between">
             <div className="grid">
-              <div className="text-sm font-extrabold">Formulario de triage</div>
-              <div className="text-sm text-black/60">Marcá síntomas y agregá contexto para calcular la prioridad.</div>
+              <div className="text-sm font-extrabold">Formulario de prioridad</div>
+              <div className="text-sm text-black/60">Marcá síntomas y agregá contexto para calcular la prioridad de atención.</div>
             </div>
             <Badge tone="neutral">2–3 min</Badge>
           </CardHeader>
           <CardContent className="grid gap-4">
             <div className="grid gap-3 sm:grid-cols-2">
-              <Field label="Mascota">
+              <Field label="Paciente">
                 <Input value={petName} onChange={e => setPetName(e.target.value)} placeholder="Ej: Minna" />
               </Field>
               <Field label="Especie">
                 <Select value={species} onChange={e => setSpecies(e.target.value as PetSpecies)}>
-                  <option>Perro</option>
-                  <option>Gato</option>
+                  <option>Adulto</option>
+                  <option>Infantil</option>
                   <option>Otro</option>
                 </Select>
               </Field>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PORTAL, SEO } from "@/lib/data";
 import { buildPageMetadata } from "@/lib/seo";
-import MiMascotaClientPage from "./mi-mascota-client-page";
+import MiMascotaClientPage from "../mi-mascota/mi-mascota-client-page";
 
 export const metadata: Metadata = buildPageMetadata({
   title: SEO.portalTitle,
@@ -9,6 +9,6 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/mi-perfil"
 });
 
-export default function MiMascotaPage() {
+export default function MiPerfilPage() {
   return <MiMascotaClientPage portalTitle={PORTAL.title} portalDescription={PORTAL.description} />;
 }

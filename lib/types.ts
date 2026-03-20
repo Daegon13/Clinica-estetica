@@ -1,4 +1,4 @@
-export type PetSpecies = "Perro" | "Gato" | "Otro";
+export type PetSpecies = "Adulto" | "Infantil" | "Otro";
 
 export type ServiceId =
   | "consulta"

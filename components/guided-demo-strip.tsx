@@ -22,10 +22,10 @@ const DEFAULT_DEMO_STEPS: DemoStep[] = [
     href: "/urgencias"
   },
   {
-    label: "Mi Mascota",
-    description: "Consultá vacunas, próximos controles e historial para seguir el plan de salud de tu mascota.",
-    ctaLabel: "Ver Mi Mascota",
-    href: "/mi-mascota"
+    label: "Mi Perfil",
+    description: "Consultá historial, próximos controles y recordatorios para seguir tu plan de atención.",
+    ctaLabel: "Ver Mi Perfil",
+    href: "/mi-perfil"
   }
 ];
 
@@ -42,8 +42,8 @@ export function GuidedDemoStrip({
   className,
   id,
   eyebrow = "RECORRIDO DESTACADO",
-  title = "Conocé cómo te acompaña VetCare",
-  description = "Recorré los momentos clave de la atención para resolver turnos, urgencias y seguimiento desde un mismo lugar.",
+  title = "Conocé cómo te acompaña la experiencia clínica",
+  description = "Recorré los momentos clave de la atención para resolver turnos, prioridades y seguimiento desde un mismo lugar.",
   steps = DEFAULT_DEMO_STEPS
 }: GuidedDemoStripProps) {
   return (

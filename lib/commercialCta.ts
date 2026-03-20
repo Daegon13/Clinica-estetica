@@ -14,7 +14,7 @@ export function resolveCommercialImplementationHref() {
 }
 
 export function useCommercialImplementationHref() {
-  const [href, setHref] = React.useState(COMMERCIAL_IMPLEMENTATION_CTA.href);
+  const [href, setHref] = React.useState<string>(COMMERCIAL_IMPLEMENTATION_CTA.href);
 
   React.useEffect(() => {
     setHref(resolveCommercialImplementationHref());

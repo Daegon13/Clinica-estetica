@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import LandingClientPage from "./lp-client-page";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: `Implementación veterinaria | ${BRAND.name}`,
+  title: `Implementación clínica | ${BRAND.name}`,
   description: `Solicitá una implementación de la experiencia digital de ${BRAND.name}: turnos, urgencias y portal.`,
   path: "/lp"
 });
