@@ -21,8 +21,9 @@ export const HERO = siteContent.hero;
 export const PORTAL = siteContent.portal;
 export const IMPLEMENTATION = siteContent.implementation;
 
-export const SERVICES: { id: ServiceId; name: string; durationMin: number; bufferMin: number; priceFrom: string; desc: string; icon: string }[] = siteContent.services.map((s) => ({
+export const SERVICES: { id: ServiceId; category: string; name: string; durationMin: number; bufferMin: number; priceFrom: string; desc: string; icon: string }[] = siteContent.services.map((s) => ({
   id: s.id,
+  category: s.category,
   name: s.name,
   durationMin: s.durationMin,
   bufferMin: s.bufferMin,

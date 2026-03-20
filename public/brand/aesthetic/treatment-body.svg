@@ -1,0 +1,21 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="36" fill="url(#bg)"/>
+  <rect x="110" y="96" width="980" height="708" rx="40" fill="#FFFFFF" fill-opacity="0.8"/>
+  <rect x="192" y="160" width="360" height="520" rx="180" fill="url(#silhouette)"/>
+  <rect x="640" y="170" width="320" height="18" rx="9" fill="#B694A7"/>
+  <rect x="640" y="216" width="248" height="16" rx="8" fill="#D7BFCC"/>
+  <rect x="640" y="314" width="344" height="220" rx="28" fill="#FFF7FA"/>
+  <path d="M684 482C737.333 416 781.2 390.4 936 390V438C836.4 438 792.667 462.667 726 534L684 482Z" fill="#D9B2C2"/>
+  <rect x="640" y="584" width="152" height="120" rx="26" fill="#FFFDFE"/>
+  <rect x="812" y="584" width="172" height="120" rx="26" fill="#F5FBFD"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF3F8"/>
+      <stop offset="1" stop-color="#EFF7FB"/>
+    </linearGradient>
+    <linearGradient id="silhouette" x1="192" y1="160" x2="552" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8C5B3"/>
+      <stop offset="1" stop-color="#D9A08F"/>
+    </linearGradient>
+  </defs>
+</svg>
