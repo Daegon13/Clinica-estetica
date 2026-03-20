@@ -1,0 +1,36 @@
+{
+  "name": "vetcare-demo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "check-conflicts": "bash ./scripts/check-conflict-markers.sh",
+    "check": "npm run check-conflicts && npm run typecheck && npm run build"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "lucide-react": "^0.468.0",
+    "next-themes": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.16.5",
+    "@types/react": "18.3.5",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "10.4.20",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.35",
+    "postcss": "8.4.45",
+    "tailwindcss": "3.4.10",
+    "typescript": "5.6.2"
+  }
+}
