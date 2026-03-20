@@ -3,7 +3,6 @@ import { SEO, STAFF } from "@/lib/data";
 import { buildPageMetadata } from "@/lib/seo";
 import { Container, Card, CardContent, Badge, LinkButton } from "@/components/ui";
 import { SectionHeading } from "@/components/section";
-import { CommercialImplementationCTA } from "@/components/commercial-implementation-cta";
 
 export const metadata: Metadata = buildPageMetadata({
   title: SEO.teamTitle,
@@ -14,15 +13,10 @@ export const metadata: Metadata = buildPageMetadata({
 export default function EquipoPage() {
   return (
     <Container className="py-10">
-      <SectionHeading
-        eyebrow="Equipo"
-        title="Un equipo cercano, criterioso y fácil de contactar"
-        desc="Combinamos atención cálida, criterio clínico y seguimiento ordenado para que cada paciente se sienta acompañado antes, durante y después de la consulta."
-      />
+      <SectionHeading eyebrow="Equipo profesional" title="Profesionales que combinan criterio, estética y experiencia" desc="Construimos una percepción premium no sólo desde el diseño, sino también desde el relato del equipo y su forma de acompañar a cada paciente." />
 
-      <div className="mt-6 max-w-3xl text-sm leading-6 text-black/65">
-        Somos un equipo de atención privada de cercanía: preferimos explicar con claridad, responder a tiempo y construir vínculos de confianza con cada persona.
-        Cuando alguien necesita control, procedimiento, seguimiento o simplemente una segunda mirada, el objetivo es el mismo: que sepa que hay un equipo presente del otro lado.
+      <div className="mt-6 max-w-3xl text-sm leading-6 text-black/65 dark:text-white/70">
+        En Aura Estética creemos en una estética moderna, confiable y natural. Por eso el equipo comunica cercanía, profesionalismo y una mirada personalizada para que cada tratamiento responda a objetivos reales y no a fórmulas genéricas.
       </div>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -32,24 +26,23 @@ export default function EquipoPage() {
               <div className="flex items-start justify-between gap-4">
                 <div className="grid gap-1">
                   <div className="text-sm font-extrabold">{p.name}</div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.08em] text-black/45">{p.role}</div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.08em] text-black/45 dark:text-white/50">{p.role}</div>
                 </div>
-                <Badge tone="neutral">Equipo profesional</Badge>
+                <Badge tone="neutral">Aura Estética</Badge>
               </div>
-              <div className="text-sm text-black/65">{p.bio}</div>
+              <div className="text-sm text-black/65 dark:text-white/70">{p.bio}</div>
             </CardContent>
           </Card>
         ))}
       </div>
 
-      <div className="mt-10 rounded-3xl border border-black/10 bg-white/70 p-5 text-sm text-black/65 shadow-sm">
-        Si querés conocernos en persona, podés reservar un turno online o escribirnos por WhatsApp. Priorizamos respuestas claras, tiempos razonables y un seguimiento que no dependa de perseguir al equipo por varios canales.
+      <div className="mt-10 rounded-3xl border border-black/10 bg-white/70 p-5 text-sm text-black/65 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-white/70">
+        Si querés conocernos en persona, podés agendar tu valoración o escribirnos por WhatsApp. La experiencia fue adaptada para transmitir el mismo cuidado que una paciente espera al elegir una clínica estética premium.
       </div>
 
       <div className="mt-10 flex flex-wrap gap-2">
-        <LinkButton href="/agenda" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Reservar turno</LinkButton>
+        <LinkButton href="/agenda" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Agendá tu valoración</LinkButton>
         <LinkButton href="/faq" variant="outline">Ver preguntas frecuentes</LinkButton>
-        <CommercialImplementationCTA location="equipo" />
       </div>
     </Container>
   );

@@ -28,7 +28,7 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
   const [serviceId, setServiceId] = React.useState<ServiceId>(initialServiceId);
   const [dateISO, setDateISO] = React.useState<string>(initialDateISO || resolveInitialDate(initialAppointments));
   const [time, setTime] = React.useState<string>("");
-  const [petName, setPetName] = React.useState("");
+  const [patientName, setPatientName] = React.useState("");
   const [ownerName, setOwnerName] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [notes, setNotes] = React.useState("");
@@ -59,7 +59,7 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
 
   function canSubmit() {
     if (!time) return false;
-    if (!petName.trim()) return false;
+    if (!patientName.trim()) return false;
     if (!ownerName.trim()) return false;
     if (phone.replace(/\D/g, "").length < 8) return false;
     return true;
@@ -74,7 +74,7 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
       dateISO,
       time,
       serviceId,
-      petName: petName.trim(),
+      petName: patientName.trim(),
       ownerName: ownerName.trim(),
       phone: phone.trim(),
       notes: notes.trim() || undefined,
@@ -93,7 +93,7 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
   function downloadICS(item: Appointment) {
     const itemService = getService(item.serviceId);
     const ics = makeICS({
-      title: `Turno Clinica Estetica — ${SERVICES.find(s => s.id === item.serviceId)?.name ?? "Servicio"}`,
+      title: `Turno Aura Estética — ${SERVICES.find(s => s.id === item.serviceId)?.name ?? "Servicio"}`,
       dateISO: item.dateISO,
       time: item.time,
       minutes: itemService.durationMin,
@@ -117,8 +117,8 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
     <Container className="py-10">
       <SectionHeading
         eyebrow="Agenda"
-        title="Reservá un turno"
-        desc="Disponibilidad confirmada para hoy y próximos días, con agenda activa y próximos turnos visibles desde el primer segundo."
+        title="Agendá tu valoración"
+        desc="Elegí tratamiento, fecha y horario con una experiencia de reserva clara, premium y pensada para conversión."
       />
 
       <div className="mt-6 grid gap-4 lg:grid-cols-[1.5fr,1fr]">
@@ -127,9 +127,9 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div className="max-w-2xl">
                 <Badge tone="good" className="bg-emerald-100 text-emerald-800">Disponibilidad activa</Badge>
-                <div className="mt-3 text-xl font-black tracking-tight text-graphite-950 sm:text-2xl">Primeros espacios listos para confirmar hoy mismo.</div>
+                <div className="mt-3 text-xl font-black tracking-tight text-graphite-950 sm:text-2xl">Primeros espacios disponibles para valoración y sesiones destacadas.</div>
                 <div className="mt-2 text-sm text-black/65">
-                  Elegí un bloque recomendado, mantené el CTA principal visible y avanzá a la reserva sin pantallas vacías ni mensajes técnicos.
+                  Elegí un horario sugerido y avanzá sin fricción desde el interés inicial hasta la reserva.
                 </div>
               </div>
               <div className="grid min-w-[220px] gap-2 rounded-2xl border border-white/70 bg-white/80 p-4 shadow-sm backdrop-blur">
@@ -172,12 +172,12 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
             <div className="mt-2 text-sm text-white/72">Disponibilidad primero, acción principal siempre a mano y soporte inmediato por chat para resolver más rápido.</div>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button onClick={jumpToBooking} className="h-11 px-5 bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">
-                Reservar ahora
+                Agendá ahora
               </Button>
               <LeadCTA interest="turnos" label="Consultar por WhatsApp" variant="outline" />
             </div>
             <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">
-              Confirmación en pocos pasos, con turno visible en agenda y opción de exportar al calendario apenas se reserva.
+              Confirmación en pocos pasos, con tu sesión visible en agenda y opción de exportar al calendario apenas se reserva.
             </div>
           </CardContent>
         </Card>
@@ -263,10 +263,10 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
             </div>
 
             <div className="grid gap-3 pt-2">
-              <div className="text-sm font-extrabold">Paso 3 — Datos</div>
+              <div className="text-sm font-extrabold">Paso 3 — Tus datos</div>
               <div className="grid gap-3 sm:grid-cols-2">
                 <Field label="Nombre de la paciente">
-                  <Input value={petName} onChange={e => setPetName(e.target.value)} placeholder="Ej: Milo" />
+                  <Input value={patientName} onChange={e => setPatientName(e.target.value)} placeholder="Ej: Carolina" />
                 </Field>
                 <Field label="Tu nombre">
                   <Input value={ownerName} onChange={e => setOwnerName(e.target.value)} placeholder="Ej: Sofía" />
@@ -275,14 +275,14 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
                   <Input value={phone} onChange={e => setPhone(e.target.value)} placeholder="Ej: 09 123 456" />
                 </Field>
                 <div />
-                <Field label="Notas (opcional)" hint="síntomas, preferencia, etc.">
-                  <Textarea value={notes} onChange={e => setNotes(e.target.value)} placeholder="Ej: viene con tos hace 2 días..." />
+                <Field label="Notas (opcional)" hint="objetivos, preferencias o antecedentes relevantes.">
+                  <Textarea value={notes} onChange={e => setNotes(e.target.value)} placeholder="Ej: quiero mejorar textura, luminosidad y manchas..." />
                 </Field>
               </div>
 
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
                 <Button onClick={createAppointment} disabled={!canSubmit()} className="h-11 px-5 bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">
-                  Confirmar turno
+                  Confirmar consulta
                 </Button>
                 <LeadCTA interest="turnos" label="Consultar por WhatsApp" variant="outline" />
                 {justCreated ? (
@@ -298,11 +298,11 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
               {justCreated ? (
                 <Card className="bg-emerald-50 ring-emerald-200/60">
                   <CardContent className="grid gap-1">
-                    <div className="text-sm font-extrabold">Turno reservado</div>
+                    <div className="text-sm font-extrabold">Consulta reservada</div>
                     <div className="text-sm text-black/70">
                       {SERVICES.find(s => s.id === justCreated.serviceId)?.name} · {justCreated.dateISO} · {justCreated.time}
                     </div>
-                    <div className="text-xs text-black/55">Te enviaremos confirmación y recordatorio por tu canal de contacto preferido.</div>
+                    <div className="text-xs text-black/55">Te enviaremos confirmación y recomendaciones previas por tu canal de contacto preferido.</div>
                   </CardContent>
                 </Card>
               ) : null}
@@ -313,7 +313,7 @@ export default function AgendaClientPage({ initialAppointments, initialServiceId
         <Card className="lg:col-span-2">
           <CardHeader>
             <div className="text-sm font-extrabold">Próximos turnos</div>
-            <div className="text-sm text-black/60">Vista rápida para paciente y recepción</div>
+            <div className="text-sm text-black/60">Vista rápida para paciente y coordinación</div>
           </CardHeader>
           <CardContent className="grid gap-3">
             <Badge tone="neutral">Agenda visible desde el inicio</Badge>

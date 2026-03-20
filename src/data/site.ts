@@ -1,130 +1,130 @@
 export const siteContent = {
   brand: {
-    name: "Clinica Estetica",
-    shortName: "CE",
-    tagline: "Atención médica privada, clara y fácil de coordinar.",
+    name: "Aura Estética",
+    shortName: "AE",
+    tagline: "Clínica estética premium con atención profesional y resultados que se sienten.",
     city: "Montevideo",
     phone: "+598097316092",
     whatsapp: "+598097316092",
     address: "Av. Italia 2450, Montevideo",
     hours: "Lunes a sábado, de 9:00 a 19:00",
     whatsappMessage:
-      "Hola Clinica Estetica, quiero coordinar una consulta sobre turnos y atención.",
-    implementationCtaLabel: "Solicitar asesoría para mi clínica",
-    implementationSecondaryCtaLabel: "Hablar por WhatsApp",
+      "Hola Aura Estética, quiero agendar una valoración y conocer qué tratamiento me recomiendan.",
+    implementationCtaLabel: "Reservá tu consulta",
+    implementationSecondaryCtaLabel: "Hablá por WhatsApp",
     implementationCtaUrl: "/contacto"
   },
   seo: {
-    defaultTitle: "Clinica Estetica — Turnos, orientación prioritaria y seguimiento clínico",
+    defaultTitle: "Aura Estética — Clínica estética premium en Montevideo",
     defaultDescription:
-      "Clinica Estetica ofrece agenda online, orientación inicial para atención prioritaria y seguimiento por WhatsApp en una experiencia médica privada clara y cercana.",
-    homeTitle: "Clinica Estetica | Turnos, orientación prioritaria y seguimiento clínico",
+      "Aura Estética es una clínica estética premium con valoración profesional, tratamientos faciales y corporales, turnos online y contacto directo por WhatsApp.",
+    homeTitle: "Aura Estética | Clínica estética premium, valoración y tratamientos",
     homeDescription:
-      "Conocé Clinica Estetica: agenda online, orientación inicial para atención prioritaria y seguimiento del paciente en una sola experiencia.",
-    servicesTitle: "Servicios clínicos | Clinica Estetica",
+      "Conocé Aura Estética: valoración estética, rejuvenecimiento facial, depilación láser y tratamientos corporales con una experiencia premium lista para convertir.",
+    servicesTitle: "Tratamientos estéticos | Aura Estética",
     servicesDescription:
-      "Explorá los servicios de Clinica Estetica: consulta, chequeos, procedimientos ambulatorios y más con foco preventivo.",
-    teamTitle: "Equipo profesional | Clinica Estetica",
+      "Explorá los tratamientos de Aura Estética: evaluación estética, depilación láser, peelings, limpieza facial profunda, armonización y más.",
+    teamTitle: "Equipo profesional | Aura Estética",
     teamDescription:
-      "Conocé al equipo de Clinica Estetica: profesionales en consulta, procedimientos y atención integral.",
-    faqTitle: "Preguntas frecuentes | Clinica Estetica",
+      "Conocé al equipo de Aura Estética: especialistas en rejuvenecimiento, armonización facial y cuidado integral de la piel.",
+    faqTitle: "Preguntas frecuentes | Aura Estética",
     faqDescription:
-      "Resolvé dudas sobre turnos, atención prioritaria, seguimiento y funcionamiento general de Clinica Estetica.",
-    locationTitle: "Ubicación y contacto | Clinica Estetica",
+      "Resolvé dudas sobre valoraciones, sesiones, cuidados previos, WhatsApp y reservas en Aura Estética.",
+    locationTitle: "Ubicación y contacto | Aura Estética",
     locationDescription:
-      "Encontrá la ubicación de Clinica Estetica, horarios de atención y vías de contacto para reservas y consultas.",
-    implementationTitle: "Implementación para clínicas privadas | Clinica Estetica",
+      "Encontrá la ubicación, horarios y canales de contacto de Aura Estética para reservar tu valoración o consulta estética.",
+    implementationTitle: "Reservá tu consulta | Aura Estética",
     implementationDescription:
-      "Dejanos tus datos y coordinamos una asesoría para adaptar Clinica Estetica a la operación de tu clínica o centro profesional.",
-    portalTitle: "Mi Perfil | Clinica Estetica",
+      "Dejanos tus datos y coordinamos tu valoración estética en Aura Estética con atención personalizada y seguimiento por WhatsApp.",
+    portalTitle: "Mi Perfil | Aura Estética",
     portalDescription:
-      "Accedé al portal de Clinica Estetica para ver historial, seguimiento y próximos controles del paciente."
+      "Accedé a tu perfil en Aura Estética para ver próximos cuidados, sesiones y recomendaciones de seguimiento estético."
   },
   hero: {
-    badge: "Clinica Estetica · Atención médica privada más clara para pacientes y equipos",
-    title: "Reservá más rápido, resolvé prioridades antes y seguí tu plan de atención.",
+    badge: "Aura Estética · Clínica estética premium para verte bien y sentirte segura",
+    title: "Resultados sutiles, atención premium y una experiencia pensada para convertir tu primera consulta en confianza real.",
     description:
-      "Una experiencia simple para pedir turno, indicar síntomas y mantener controles e historial en un solo lugar.",
+      "Valoración profesional, tratamientos faciales y corporales, seguimiento claro y contacto directo por WhatsApp en una clínica estética moderna, confiable y aspiracional.",
     bullets: [
-      "Priorización de atención con guía clara y contacto directo por WhatsApp.",
-      "Recordatorios automáticos para reducir ausencias y sostener controles preventivos.",
-      "Historial y próximos pasos visibles para pacientes en un solo lugar."
+      "Agendá tu valoración en minutos y recibí orientación personalizada según tu objetivo estético.",
+      "Tratamientos faciales y corporales con protocolos profesionales, mirada médica y experiencia premium.",
+      "Seguimiento claro antes y después para que vivas cada cambio con seguridad y confianza."
     ],
     quickSummary:
-      "Pasamos de mensajes sueltos a un flujo claro: reserva, orientación prioritaria y seguimiento en minutos.",
-    quickSummaryFoot: "Flujo claro para el paciente, contexto útil para el equipo.",
+      "Una experiencia premium desde Instagram hasta la consulta: descubrís, confiás, reservás y avanzás.",
+    quickSummaryFoot: "Menos fricción, más deseo de reservar y una marca que se percibe real.",
     demoDescription:
-      "Empezá por agenda, seguí con orientación prioritaria y cerrá el recorrido con el seguimiento de Mi Perfil."
+      "Recorré valoración, tratamientos destacados, resultados y seguimiento en una experiencia comercial lista para demo."
   },
   featuredServicesIntro: {
-    title: "Atención clínica integral para cada etapa del paciente",
+    title: "Tratamientos estéticos diseñados para realzar tu mejor versión",
     description:
-      "En Clinica Estetica combinamos consulta, seguimiento preventivo y acompañamiento profesional para resolver en un solo lugar lo que cada paciente necesita, con tiempos pensados para atender con calma.",
+      "En Aura Estética combinamos diagnóstico profesional, tecnología y una curaduría de tratamientos premium para trabajar piel, rejuvenecimiento y armonización con resultados naturales y una experiencia cuidada de punta a punta.",
     bullets: [
-      "Consultas organizadas para reducir esperas y dar una experiencia más cómoda.",
-      "Recordatorios y seguimiento para sostener controles, tratamientos y hábitos de cuidado.",
-      "Recomendaciones claras para tomar decisiones con confianza en cada visita."
+      "Valoración personalizada para entender tu punto de partida y recomendar el plan indicado.",
+      "Sesiones y protocolos pensados para resultados visibles con seguimiento real.",
+      "Una experiencia elegante, cálida y confiable que acompaña cada etapa del tratamiento."
     ]
   },
   services: [
     {
       id: "consulta",
-      category: "consulta",
-      name: "Consulta inicial",
-      durationMin: 30,
+      category: "valoracion",
+      name: "Evaluación estética",
+      durationMin: 40,
       bufferMin: 10,
-      priceFrom: "$ 900",
-      description: "Evaluación clínica, plan de cuidado y seguimiento.",
+      priceFrom: "$ 1.200",
+      description: "Diagnóstico facial o corporal, objetivos y plan de tratamiento personalizado.",
       icon: "consulta"
     },
     {
       id: "control",
-      category: "consulta",
-      name: "Control y chequeo",
-      durationMin: 40,
+      category: "laser",
+      name: "Depilación láser",
+      durationMin: 45,
       bufferMin: 10,
-      priceFrom: "$ 1200",
-      description: "Chequeo preventivo con recomendaciones claras.",
-      icon: "control"
+      priceFrom: "$ 1.800",
+      description: "Tecnología segura para reducir vello no deseado con sesiones planificadas.",
+      icon: "turnos"
     },
     {
       id: "vacunacion",
-      category: "prevencion",
-      name: "Plan preventivo",
-      durationMin: 20,
-      bufferMin: 10,
-      priceFrom: "$ 750",
-      description: "Controles periódicos y recordatorios para el seguimiento.",
+      category: "facial",
+      name: "Limpieza facial profunda",
+      durationMin: 60,
+      bufferMin: 15,
+      priceFrom: "$ 1.600",
+      description: "Higiene, extracción, hidratación y glow inmediato para una piel más uniforme.",
       icon: "vacunacion"
     },
     {
       id: "desparasitacion",
-      category: "prevencion",
-      name: "Tratamiento ambulatorio",
-      durationMin: 20,
+      category: "facial",
+      name: "Peelings",
+      durationMin: 45,
       bufferMin: 10,
-      priceFrom: "$ 600",
-      description: "Indicación simple para necesidades frecuentes de consultorio.",
-      icon: "desparasitacion"
+      priceFrom: "$ 1.500",
+      description: "Renovación de la piel con protocolos personalizados según textura, manchas y luminosidad.",
+      icon: "laboratorio"
     },
     {
       id: "cirugia",
-      category: "procedimientos",
-      name: "Procedimiento programado",
+      category: "rejuvenecimiento",
+      name: "Rejuvenecimiento facial",
       durationMin: 60,
-      bufferMin: 20,
+      bufferMin: 15,
       priceFrom: "A cotizar",
-      description: "Evaluación previa, coordinación y seguimiento posterior.",
+      description: "Planes combinados para firmeza, hidratación, textura y prevención del envejecimiento.",
       icon: "cirugia"
     },
     {
       id: "estetica",
-      category: "bienestar",
-      name: "Bienestar y cuidado complementario",
-      durationMin: 60,
+      category: "premium",
+      name: "Armonización facial y tratamientos corporales",
+      durationMin: 75,
       bufferMin: 15,
-      priceFrom: "$ 1400",
-      description: "Sesiones de bienestar y cuidado personal con atención profesional.",
+      priceFrom: "A cotizar",
+      description: "Abordaje integral para realzar facciones y trabajar contorno corporal con criterio profesional.",
       icon: "grooming"
     }
   ],
@@ -132,83 +132,83 @@ export const siteContent = {
     {
       id: "s1",
       name: "Dra. Valentina Ríos",
-      role: "Dirección médica y consulta general",
+      role: "Dirección médica estética",
       bio:
-        "Acompaña controles, consultas generales y seguimientos clínicos con una mirada clara y cercana. Se toma el tiempo para explicar qué está pasando y cuál es el próximo paso recomendado para cada paciente."
+        "Lidera la valoración clínica y el diseño de protocolos personalizados. Su enfoque combina precisión, naturalidad y una experiencia premium centrada en la confianza de cada paciente."
     },
     {
       id: "s2",
-      name: "Dr. Martín Silva",
-      role: "Procedimientos y recuperación",
+      name: "Dra. Martina Suárez",
+      role: "Especialista en rejuvenecimiento y armonización facial",
       bio:
-        "Coordina procedimientos programados, evaluaciones previas y recuperaciones posteriores con protocolos simples y seguimiento real para cada caso."
+        "Trabaja resultados sutiles y armónicos, priorizando diagnóstico, técnica y seguimiento para que cada intervención respete la identidad de quien consulta."
     },
     {
       id: "s3",
-      name: "Camila Pereira",
-      role: "Recepción y acompañamiento al paciente",
+      name: "Lic. Camila Pereira",
+      role: "Cosmiatra especializada en piel y protocolos faciales",
       bio:
-        "Ordena la agenda, confirma turnos y da seguimiento después de cada visita. Su prioridad es que cada persona sepa a quién escribir y qué esperar en cada etapa."
+        "Acompaña limpiezas profundas, peelings y cuidados de mantenimiento con una mirada detallista, cálida y orientada a resultados visibles."
     },
     {
       id: "s4",
-      name: "Lic. Lucía Núñez",
-      role: "Bienestar integral y atención complementaria",
+      name: "Lucía Núñez",
+      role: "Experiencia del paciente y coordinación",
       bio:
-        "Trabaja con tiempos tranquilos, cuidado personalizado y especial atención en quienes necesitan una experiencia cómoda, segura y sin estrés innecesario."
+        "Organiza agenda, seguimiento y acompañamiento por WhatsApp para que cada persona sepa qué esperar antes, durante y después de su tratamiento."
     }
   ],
   testimonials: [
     {
       name: "Carolina M.",
-      text: "Entré por WhatsApp con dudas y terminé con turno confirmado en 2 minutos. Súper claro y humano."
+      text: "Llegué por Instagram, escribí por WhatsApp y en minutos ya tenía mi valoración agendada. La experiencia se sintió premium desde el primer contacto."
     },
     {
-      name: "Diego R.",
-      text: "La orientación inicial me dijo qué hacer en el momento. Me bajó la ansiedad y me guiaron perfecto."
+      name: "Sofía R.",
+      text: "Me encantó que me explicaran qué tratamiento era para mí y cuál no. Esa honestidad me dio muchísima confianza."
     },
     {
-      name: "Sofía L.",
-      text: "El seguimiento me salvó: recordatorio y listo, sin llamadas ni idas y vueltas."
+      name: "Julieta L.",
+      text: "La limpieza facial y el seguimiento posterior hicieron toda la diferencia. El resultado se ve y la atención se siente cuidada."
     }
   ],
   faqs: [
     {
-      q: "¿Puedo reservar sin llamar?",
-      a: "Sí. Podés reservar en pocos pasos y recibir la confirmación por WhatsApp o email según el flujo configurado."
+      q: "¿Necesito una valoración antes de hacerme un tratamiento?",
+      a: "Sí. La valoración nos permite entender tu objetivo, revisar tu piel o zona a tratar y recomendarte el protocolo más adecuado antes de reservar sesiones."
     },
     {
-      q: "¿La orientación prioritaria reemplaza una consulta?",
-      a: "No. Sirve para priorizar y darte una guía inmediata. Si el caso es urgente, la indicación siempre es contactar o asistir de inmediato."
+      q: "¿Puedo escribir por WhatsApp si vengo desde Instagram?",
+      a: "Sí. De hecho, es uno de los canales principales para resolver dudas, conocer disponibilidad y reservar tu consulta de manera rápida."
     },
     {
-      q: "¿Cómo funcionan los recordatorios?",
-      a: "Los recordatorios pueden enviarse por WhatsApp o email con mensajes listos para cada etapa de atención."
+      q: "¿La depilación láser y los peelings requieren cuidados previos?",
+      a: "Sí. Antes de cada sesión te indicamos de forma clara qué evitar y cómo preparar la piel para lograr mejores resultados y mayor seguridad."
     },
     {
-      q: "¿Cuánto cuesta una consulta o control?",
-      a: "Antes de reservar vas a ver un valor orientativo según el tipo de atención. Si durante la consulta hace falta sumar estudios o procedimientos, te lo explicamos antes de avanzar."
+      q: "¿Los resultados son naturales?",
+      a: "Ese es uno de nuestros principios. Priorizamos planes personalizados y resultados armónicos, sin cambios exagerados ni recomendaciones innecesarias."
     },
     {
-      q: "¿Puedo cancelar o reprogramar un turno?",
-      a: "Sí. Desde la confirmación podés mover o cancelar el turno en pocos pasos. Si necesitás ayuda, también podés escribirnos."
+      q: "¿Puedo reprogramar una consulta o sesión?",
+      a: "Sí. Podés hacerlo con anticipación y también escribirnos por WhatsApp para encontrar el mejor nuevo horario."
     },
     {
-      q: "¿Qué cambia al reservar por esta vía?",
-      a: "Ganás claridad desde el inicio: reservás más rápido, recibís recordatorios y tenés un seguimiento más ordenado en un solo lugar."
+      q: "¿Qué tratamientos trabajan rostro y cuerpo?",
+      a: "Combinamos valoración estética, limpieza facial profunda, peelings, rejuvenecimiento facial, armonización facial y tratamientos corporales según tu caso."
     }
   ],
   portal: {
     navLabel: "Mi Perfil",
     title: "Mi Perfil",
     description:
-      "Una vista clara del portal del paciente con estado general, próximos cuidados e historial clínico esencial.",
-    historyTitle: "Historial clínico",
-    historyFoot: "Resumen clínico breve para seguimiento cotidiano del paciente."
+      "Una vista clara de tu perfil en Aura Estética con próximos cuidados, sesiones agendadas y seguimiento recomendado.",
+    historyTitle: "Historial estético",
+    historyFoot: "Resumen breve de sesiones y recomendaciones para tu continuidad estética."
   },
   implementation: {
-    title: "Solicitar asesoría para mi clínica",
+    title: "Reservá tu consulta",
     description:
-      "Clinica Estetica reúne agenda online, orientación inicial para atención prioritaria, portal para pacientes y un panel operativo para el equipo. Completá este formulario y te contactamos con una propuesta adaptada a tu ciudad, tus servicios y tu forma de trabajo."
+      "Aura Estética reúne valoración profesional, tratamientos premium, contacto por WhatsApp y una experiencia clara para pacientes que llegan desde redes. Completá el formulario y coordinamos tu consulta con seguimiento personalizado."
   }
 } as const;
