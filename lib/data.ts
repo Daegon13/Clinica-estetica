@@ -13,7 +13,9 @@ export const BRAND = {
   implementationCtaUrl: siteContent.brand.implementationCtaUrl,
   address: siteContent.brand.address,
   hours: siteContent.brand.hours,
-  city: siteContent.brand.city
+  city: siteContent.brand.city,
+  neighborhood: siteContent.brand.neighborhood,
+  instagram: siteContent.brand.instagram
 };
 
 export const SEO = siteContent.seo;
