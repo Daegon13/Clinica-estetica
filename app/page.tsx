@@ -139,9 +139,10 @@ export default function HomePage() {
             </ul>
             <div className="flex flex-wrap gap-2">
               <LinkButton href="/agenda" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Agendá tu valoración</LinkButton>
-              <LeadCTA interest="general" label="Hablá por WhatsApp" variant="outline" />
-              <LinkButton href="/contacto" variant="outline">Reservá tu consulta</LinkButton>
+              <LeadCTA interest="general" label="Resolver dudas por WhatsApp" variant="outline" />
+              <LinkButton href="/contacto" variant="outline">Quiero que me contacten</LinkButton>
             </div>
+            <p className="text-xs text-black/50 dark:text-white/55">Si todavía no sabés qué tratamiento elegir, empezá por una valoración y te orientamos sin vueltas.</p>
             <div className="grid gap-3 pt-2 sm:grid-cols-3">
               <div className="rounded-[24px] border border-black/10 bg-white/70 px-4 py-3 shadow-soft">
                 <div className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">Tratamientos</div>
@@ -456,9 +457,16 @@ export default function HomePage() {
       </Container>
 
       <Container className="py-10 sm:py-12">
-        <SectionHeading eyebrow="FAQ" title="Dudas frecuentes antes de reservar" desc="Respuestas claras para acompañarte antes de tu consulta y ayudarte a decidir con tranquilidad." />
-        <div className="mt-8 grid gap-3">
-          {FAQS.slice(0, 4).map((item) => (
+        <SectionHeading eyebrow="FAQ" title="Dudas frecuentes antes de reservar" desc="Respondemos objeciones habituales para que puedas decidir con más claridad, incluso si recién nos conocés por Instagram." />
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-[24px] border border-black/10 bg-white/80 px-4 py-3 text-sm text-black/62 shadow-soft dark:border-white/10 dark:bg-white/5 dark:text-white/70">
+          <p>¿Preferís resolverlo rápido? Te orientamos según tu objetivo, tiempos y tipo de tratamiento.</p>
+          <div className="flex flex-wrap gap-2">
+            <LeadCTA interest="general" label="Quiero resolver mis dudas" variant="outline" />
+            <LinkButton href="/agenda">Ver agenda disponible</LinkButton>
+          </div>
+        </div>
+        <div className="mt-8 grid gap-3 md:grid-cols-2">
+          {FAQS.slice(0, 6).map((item) => (
             <Card key={item.q} className="border border-black/10 bg-white/92">
               <CardContent className="grid gap-2">
                 <div className="text-sm font-extrabold">{item.q}</div>
@@ -474,7 +482,7 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <div className="text-sm font-bold uppercase tracking-[0.18em] text-white/50">Reservá tu experiencia</div>
             <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-4xl">Tu primera consulta puede ser el comienzo de un cambio sutil, cuidado y bien acompañado.</h2>
-            <p className="mt-3 text-sm text-white/75 sm:text-base">Coordiná tu valoración, conocé los tratamientos indicados para vos y resolvé dudas con un equipo que prioriza naturalidad, criterio y experiencia.</p>
+            <p className="mt-3 text-sm text-white/75 sm:text-base">Coordiná tu valoración, conocé los tratamientos indicados para vos y avanzá con información clara sobre sesiones, tiempos y cuidados.</p>
             <div className="mt-6 flex flex-wrap gap-2">
               <LinkButton href="/agenda" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Agendá tu valoración</LinkButton>
               <LeadCTA interest="general" label="Hablá por WhatsApp" variant="outline" />
