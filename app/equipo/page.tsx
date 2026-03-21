@@ -13,7 +13,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function EquipoPage() {
   return (
-    <Container className="py-10 sm:py-14">
+    <Container className="content-auto py-8 sm:py-12 lg:py-14">
       <SectionHeading eyebrow="Equipo profesional" title="Profesionales que combinan criterio, estética y experiencia" desc="La propuesta premium de Aura Estética se apoya en un equipo que transmite cercanía, precisión y una mirada personalizada." />
 
       <div className="mt-6 grid gap-6 xl:grid-cols-[0.92fr_1.08fr] xl:items-start">
@@ -33,7 +33,7 @@ export default function EquipoPage() {
             En Aura Estética creemos en una estética moderna, confiable y natural. Por eso el equipo comunica cercanía, profesionalismo y una mirada personalizada para que cada tratamiento responda a objetivos reales y no a fórmulas genéricas.
           </div>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
             {STAFF.map((p) => (
               <Card key={p.id} className="border border-black/10 bg-white/95">
                 <CardContent className="grid gap-3">
@@ -52,7 +52,7 @@ export default function EquipoPage() {
         </div>
       </div>
 
-      <div className="mt-10 rounded-[32px] border border-black/10 bg-gradient-to-r from-white to-[#f5fbfd] p-5 text-sm text-black/65 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-white/70">
+      <div className="mt-10 rounded-[32px] border border-black/10 bg-gradient-to-r from-white to-[#f5fbfd] p-5 text-sm leading-6 text-black/65 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-white/70 sm:p-6">
         Si querés conocernos en persona, podés agendar tu valoración o escribirnos por WhatsApp. La experiencia fue diseñada para transmitir el mismo cuidado que una paciente espera al elegir una clínica estética premium.
       </div>
 

@@ -81,8 +81,8 @@ export function Nav() {
   const navLinks = demoToolsEnabled ? [...links, { href: "/adminv1", label: "Panel de gestión" }] : links;
 
   return (
-    <div className="sticky top-0 z-30 border-b border-black/5 bg-warm-100/85 text-graphite-900 backdrop-blur dark:border-white/10 dark:bg-graphite-950/85 dark:text-white">
-      <Container className="flex h-16 flex-nowrap items-center justify-between gap-3 overflow-hidden">
+    <div className="sticky top-0 z-30 border-b border-black/5 bg-warm-100/88 text-graphite-900 backdrop-blur-xl dark:border-white/10 dark:bg-graphite-950/88 dark:text-white">
+      <Container className="flex min-h-16 flex-wrap items-center justify-between gap-3 py-3 lg:flex-nowrap lg:py-0">
         <Link href={withDemo("/")} className="flex shrink-0 items-center gap-2">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-graphite-900 font-black text-white dark:bg-cyanSoft-400 dark:text-graphite-950">{BRAND.shortName}</span>
           <div className="leading-tight">
@@ -100,15 +100,15 @@ export function Nav() {
           })}
         </nav>
 
-        <div className="flex shrink-0 flex-nowrap items-center gap-2 [&>*]:shrink-0">
+        <div className="flex w-full shrink-0 flex-wrap items-center justify-end gap-2 sm:w-auto sm:flex-nowrap [&>*]:shrink-0">
           {demoToolsEnabled ? <button type="button" onClick={onResetDemo} className="hidden whitespace-nowrap rounded-xl border border-black/10 bg-white px-3 py-2 text-sm font-semibold hover:bg-black/5 md:inline-flex dark:border-white/15 dark:bg-graphite-900 dark:hover:bg-white/10">Reiniciar datos</button> : null}
           <LinkButton href={withDemo("/agenda")} className="hidden whitespace-nowrap sm:inline-flex" variant="outline">Agendá tu valoración</LinkButton>
           {demoToolsEnabled ? <ThemeToggle /> : null}
-          <LinkButton href={whatsappUrl} target="_blank" rel="noreferrer" onClick={onWhatsappClick} className="whitespace-nowrap bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Hablá por WhatsApp</LinkButton>
+          <LinkButton href={whatsappUrl} target="_blank" rel="noreferrer" onClick={onWhatsappClick} className="w-full whitespace-nowrap bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300 sm:w-auto">Hablá por WhatsApp</LinkButton>
         </div>
       </Container>
 
-      <Container className="pb-3 lg:hidden">
+      <Container className="pb-3 pt-1 lg:hidden">
         <div className="flex flex-wrap gap-2">
           {navLinks.map(l => {
             const active = pathname === l.href;

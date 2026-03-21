@@ -25,16 +25,16 @@ export default function UbicacionPage() {
   const mapsEmbed = `https://www.google.com/maps?q=${mapsQuery}&z=16&output=embed`;
 
   return (
-    <Container className="py-10 sm:py-14">
+    <Container className="content-auto py-8 sm:py-12 lg:py-14">
       <SectionHeading eyebrow="Ubicación · contacto · horarios" title="Toda la información para consultar y llegar sin fricción" desc="Mostramos dirección, horarios, WhatsApp e Instagram en un solo bloque para que reservar sea una decisión simple, especialmente desde mobile." />
-      <div className="mt-8 grid gap-4 xl:grid-cols-[1.05fr_0.95fr]">
+      <div className="mt-8 grid gap-4 xl:grid-cols-[1.05fr_0.95fr] xl:gap-5">
         <Card className="overflow-hidden border border-black/10 bg-gradient-to-br from-white via-white to-cyanSoft-50/60">
           <CardHeader className="border-b border-black/10 bg-white/80">
             <div className="flex flex-wrap items-center gap-2"><Badge tone="good">Sede principal</Badge><Badge tone="neutral">Acceso ágil</Badge><Badge tone="neutral">WhatsApp activo</Badge></div>
             <div className="mt-4 grid gap-4 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-black/45">{BRAND.name}</p>
-                <h2 className="mt-2 text-3xl font-black tracking-tight text-graphite-950">Cómo llegar y qué esperar en tu visita</h2>
+                <h2 className="mt-2 text-balance text-3xl font-black tracking-tight text-graphite-950 lg:text-[2.6rem]">Cómo llegar y qué esperar en tu visita</h2>
                 <p className="mt-3 max-w-2xl text-sm leading-6 text-black/65">Nuestra sede se presenta como una referencia elegante y clara: escribís por WhatsApp, coordinás tu valoración y llegás con horario, dirección e indicaciones previas ya resueltas.</p>
               </div>
               <div className="rounded-3xl border border-black/10 bg-white p-4 shadow-soft"><div className="flex items-start gap-3"><div className="rounded-2xl bg-cyanSoft-100 p-3 text-cyanSoft-700"><MapPin className="h-5 w-5" /></div><div><p className="text-xs font-bold uppercase tracking-[0.18em] text-black/45">Dirección</p><p className="mt-1 text-base font-bold text-graphite-950">{BRAND.address}</p><p className="mt-2 text-sm leading-6 text-black/65">Ubicación mock coherente en una zona reconocible, con buena conectividad para llegar en auto, taxi o transporte público.</p></div></div></div>
@@ -50,7 +50,7 @@ export default function UbicacionPage() {
               aspectClassName="aspect-[16/9]"
               sizes="(min-width: 1280px) 52vw, 100vw"
             />
-            <div className="grid gap-3 sm:grid-cols-2">{visitHighlights.map(({ icon: Icon, title, description, detail }) => <div key={title} className="rounded-3xl border border-black/10 bg-white p-4 shadow-soft"><div className="flex items-start gap-3"><div className="rounded-2xl bg-warm-50 p-3 text-graphite-900 ring-1 ring-black/5"><Icon className="h-5 w-5" /></div><div><div className="text-sm font-bold text-graphite-950">{title}</div><div className="mt-1 text-sm font-medium text-black/75">{description}</div><p className="mt-2 text-sm leading-6 text-black/60">{detail}</p></div></div></div>)}</div>
+            <div className="grid gap-3 md:grid-cols-2">{visitHighlights.map(({ icon: Icon, title, description, detail }) => <div key={title} className="rounded-3xl border border-black/10 bg-white p-4 shadow-soft"><div className="flex items-start gap-3"><div className="rounded-2xl bg-warm-50 p-3 text-graphite-900 ring-1 ring-black/5"><Icon className="h-5 w-5" /></div><div><div className="text-sm font-bold text-graphite-950">{title}</div><div className="mt-1 text-sm font-medium text-black/75">{description}</div><p className="mt-2 text-sm leading-6 text-black/60">{detail}</p></div></div></div>)}</div>
             <div className="flex flex-wrap gap-2"><LinkButton href={`https://www.google.com/maps/search/?api=1&query=${mapsQuery}`} target="_blank" rel="noreferrer" variant="outline">Abrir en Google Maps</LinkButton><LinkButton href="/agenda" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Agendá tu valoración</LinkButton><LeadCTA interest="general" label="Consultar por WhatsApp" variant="outline" /></div>
           </CardContent>
         </Card>
