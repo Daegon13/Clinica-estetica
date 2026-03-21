@@ -184,28 +184,36 @@ export const siteContent = {
   ],
   faqs: [
     {
-      q: "¿Necesito una valoración antes de hacerme un tratamiento?",
-      a: "Sí. La valoración nos permite entender tu objetivo, revisar tu piel o zona a tratar y recomendarte el protocolo más adecuado antes de reservar sesiones."
+      q: "¿Cómo agendo si llegué desde Instagram?",
+      a: "Podés reservar por WhatsApp o desde la agenda online. Si venís desde Instagram, respondemos tus dudas primero y te guiamos al turno más conveniente."
     },
     {
-      q: "¿Puedo escribir por WhatsApp si vengo desde Instagram?",
-      a: "Sí. De hecho, es uno de los canales principales para resolver dudas, conocer disponibilidad y reservar tu consulta de manera rápida."
+      q: "¿La valoración es personalizada?",
+      a: "Sí. Revisamos tu piel, la zona a tratar, tus objetivos y tus tiempos para indicarte un plan realista y adecuado para vos."
     },
     {
-      q: "¿La depilación láser y los peelings requieren cuidados previos?",
-      a: "Sí. Antes de cada sesión te indicamos de forma clara qué evitar y cómo preparar la piel para lograr mejores resultados y mayor seguridad."
+      q: "¿Cuántas sesiones voy a necesitar?",
+      a: "Depende del tratamiento y de tu punto de partida. En la valoración te damos una estimación de sesiones, frecuencia y cuidados para que sepas cómo avanzar."
     },
     {
-      q: "¿Los resultados son naturales?",
-      a: "Ese es uno de nuestros principios. Priorizamos planes personalizados y resultados armónicos, sin cambios exagerados ni recomendaciones innecesarias."
+      q: "¿Qué cuidados previos o posteriores tengo que seguir?",
+      a: "Varían según el procedimiento, pero siempre te explicamos qué evitar, cómo preparar la piel y qué hacer después para acompañar una buena recuperación."
+    },
+    {
+      q: "¿Cuánto tiempo de recuperación suele haber?",
+      a: "Muchos tratamientos permiten retomar la rutina el mismo día o al día siguiente. Si alguno requiere más cuidados, te lo aclaramos antes de reservar."
+    },
+    {
+      q: "¿Hay contraindicaciones generales?",
+      a: "Sí. Embarazo, infecciones activas, irritación en la zona o ciertos antecedentes pueden hacer que posterguemos o adaptemos el tratamiento hasta evaluarte."
+    },
+    {
+      q: "¿Necesito una valoración antes de reservar sesiones?",
+      a: "En la mayoría de los casos sí, porque nos permite priorizar seguridad, definir objetivos posibles y recomendarte el protocolo correcto desde el inicio."
     },
     {
       q: "¿Puedo reprogramar una consulta o sesión?",
-      a: "Sí. Podés hacerlo con anticipación y también escribirnos por WhatsApp para encontrar el mejor nuevo horario."
-    },
-    {
-      q: "¿Qué tratamientos trabajan rostro y cuerpo?",
-      a: "Combinamos valoración estética, limpieza facial profunda, peelings, rejuvenecimiento facial, armonización facial y tratamientos corporales según tu caso."
+      a: "Sí. Si nos avisás con anticipación, buscamos un nuevo horario y te ayudamos por WhatsApp para que el cambio sea simple."
     }
   ],
   portal: {
