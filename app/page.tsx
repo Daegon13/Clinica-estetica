@@ -31,18 +31,37 @@ const featuredCards = [
 const processSteps = [
   {
     step: "01",
-    title: "Primera consulta",
-    desc: "Nos escribís, te orientamos y coordinamos una valoración que se adapte a tus tiempos."
+    title: "Valoración inicial",
+    desc: "Revisamos antecedentes, expectativas y estado de la piel para indicar opciones acordes a tu caso, sin apuro ni sobreindicación."
   },
   {
     step: "02",
-    title: "Plan personalizado",
-    desc: "Definimos un protocolo facial o corporal según tu objetivo, tu piel y tu ritmo de vida."
+    title: "Tratamiento personalizado",
+    desc: "Definimos un plan facial o corporal con objetivos claros, tiempos estimados y cuidados previos para que sepas qué esperar."
   },
   {
     step: "03",
-    title: "Tratamiento y control",
-    desc: "Realizamos las sesiones y acompañamos el proceso para que cada paso se sienta claro y cuidado."
+    title: "Seguimiento",
+    desc: "Acompañamos cada etapa con indicaciones posteriores, control de evolución y ajustes responsables cuando el tratamiento lo requiere."
+  }
+];
+
+const trustSignals = [
+  {
+    title: "Atención personalizada",
+    desc: "Cada consulta parte de una valoración real para adaptar el tratamiento al objetivo, tiempos y contexto de cada paciente."
+  },
+  {
+    title: "Equipamiento moderno",
+    desc: "Trabajamos con aparatología actual y protocolos actualizados para sostener una práctica ordenada y consistente."
+  },
+  {
+    title: "Higiene y cuidado",
+    desc: "Cabinas preparadas entre turnos, insumos descartables cuando corresponde y una experiencia prolija en cada detalle."
+  },
+  {
+    title: "Enfoque profesional",
+    desc: "Indicamos lo necesario, explicamos límites y priorizamos resultados armónicos antes que promesas grandilocuentes."
   }
 ];
 
@@ -236,40 +255,75 @@ export default function HomePage() {
       </Container>
 
       <Container className="py-10 sm:py-12">
-        <SectionHeading eyebrow="Cómo trabajamos" title="Un proceso simple para reservar, tratar y acompañar" desc="La experiencia fue adaptada para bajar fricción, transmitir serenidad y sostener confianza en cada etapa." />
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
-          {processSteps.map((item) => (
-            <Card key={item.step} className="border border-black/10 bg-white/90">
-              <CardContent className="grid gap-3">
-                <div className="text-xs font-black uppercase tracking-[0.18em] text-black/40 dark:text-white/45">{item.step}</div>
-                <div className="text-lg font-extrabold">{item.title}</div>
-                <p className="text-sm text-black/60 dark:text-white/70">{item.desc}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="overflow-hidden rounded-[36px] border border-black/8 bg-[linear-gradient(180deg,#fffdfd_0%,#fff8fb_48%,#f7fbfd_100%)] shadow-soft">
+          <div className="grid gap-8 px-5 py-8 sm:px-8 sm:py-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
+            <div>
+              <SectionHeading eyebrow="Cómo trabajamos" title="Metodología clara para decidir con tranquilidad y tratar con criterio" desc="Ordenamos la experiencia en tres etapas para que el sitio se perciba como una clínica real: evaluación, indicación personalizada y seguimiento responsable." />
+              <div className="mt-8 grid gap-4">
+                {processSteps.map((item) => (
+                  <div key={item.step} className="grid gap-4 rounded-[28px] border border-black/8 bg-white/88 p-5 shadow-[0_18px_50px_rgba(15,23,42,0.06)] sm:grid-cols-[auto_1fr] sm:items-start">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-[#f5f0f3] text-sm font-black tracking-[0.16em] text-black/55">
+                      {item.step}
+                    </div>
+                    <div>
+                      <div className="text-lg font-extrabold text-graphite-950">{item.title}</div>
+                      <p className="mt-2 text-sm leading-6 text-black/65">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-4">
+              <Card className="border border-black/8 bg-graphite-950 text-white shadow-[0_28px_70px_rgba(15,23,42,0.18)]">
+                <CardContent className="grid gap-4 p-6">
+                  <div className="text-xs font-black uppercase tracking-[0.18em] text-white/45">Señales de confianza</div>
+                  <h3 className="text-2xl font-black tracking-tight">Un entorno cuidado, indicaciones claras y una atención que transmite seriedad.</h3>
+                  <p className="text-sm leading-6 text-white/72">La confianza también se construye mostrando cómo se trabaja: con evaluación inicial, criterios de higiene, aparatología adecuada y acompañamiento posterior.</p>
+                </CardContent>
+              </Card>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {trustSignals.map((signal) => (
+                  <Card key={signal.title} className="border border-black/8 bg-white/92">
+                    <CardContent className="grid gap-2">
+                      <div className="text-sm font-extrabold text-graphite-950">{signal.title}</div>
+                      <p className="text-sm leading-6 text-black/65">{signal.desc}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </Container>
 
       <Container className="py-10 sm:py-12">
-        <SectionHeading eyebrow="Equipo profesional" title="Especialistas que combinan criterio médico-estético y calidez en la atención" desc="La marca se apoya en un equipo que comunica experiencia, naturalidad y acompañamiento personalizado." />
+        <SectionHeading eyebrow="Equipo profesional" title="Un equipo interdisciplinario que suma criterio clínico, técnica y seguimiento cercano" desc="Presentamos perfiles verosímiles, roles claros y una voz profesional para que la clínica se sienta consistente desde la primera visita al sitio." />
         <div className="mt-8 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
           <MediaCard
             src="/brand/aesthetic/team-portrait.svg"
             alt="Retrato editorial del equipo profesional de Aura Estética"
             eyebrow="Equipo Aura Estética"
-            title="Profesionales enfocados en resultados armónicos"
-            description="Una presencia cálida y sobria para acompañar la promesa premium de la clínica."
+            title="Profesionales enfocados en diagnóstico, técnica y cuidado del detalle"
+            description="Una presencia sobria para acompañar una práctica estética ordenada, cercana y centrada en resultados naturales."
             sizes="(min-width: 1024px) 30vw, 100vw"
             className="h-full"
             aspectClassName="aspect-[4/5]"
           />
           <div className="grid gap-4 sm:grid-cols-2">
             {STAFF.map((person) => (
-              <Card key={person.id} className="border border-black/10 bg-white/95">
-                <CardContent className="grid gap-2">
-                  <div className="text-sm font-extrabold">{person.name}</div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.12em] text-black/45 dark:text-white/50">{person.role}</div>
-                  <p className="text-sm text-black/65 dark:text-white/70">{person.bio}</p>
+              <Card key={person.id} className="border border-black/10 bg-white/95 shadow-[0_16px_40px_rgba(15,23,42,0.05)]">
+                <CardContent className="grid gap-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <div className="text-sm font-extrabold">{person.name}</div>
+                      <div className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-black/45 dark:text-white/50">{person.role}</div>
+                    </div>
+                    <span className="rounded-full border border-black/10 bg-[#f7f1f5] px-3 py-1 text-[11px] font-black uppercase tracking-[0.14em] text-black/45">
+                      Equipo
+                    </span>
+                  </div>
+                  <p className="text-sm leading-6 text-black/65 dark:text-white/70">{person.bio}</p>
                 </CardContent>
               </Card>
             ))}

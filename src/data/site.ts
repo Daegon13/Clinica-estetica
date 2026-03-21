@@ -142,30 +142,30 @@ export const siteContent = {
     {
       id: "s1",
       name: "Dra. Valentina Ríos",
-      role: "Dirección médica estética",
+      role: "Directora médica · Medicina estética",
       bio:
-        "Lidera la valoración clínica y el diseño de protocolos personalizados. Su enfoque combina precisión, naturalidad y una experiencia premium centrada en la confianza de cada paciente."
+        "Coordina las valoraciones iniciales y supervisa la indicación de tratamientos faciales inyectables y regenerativos. Prioriza decisiones prudentes, objetivos realistas y una comunicación clara en cada consulta."
     },
     {
       id: "s2",
       name: "Dra. Martina Suárez",
-      role: "Especialista en rejuvenecimiento y armonización facial",
+      role: "Médica estética · Rejuvenecimiento facial",
       bio:
-        "Trabaja resultados sutiles y armónicos, priorizando diagnóstico, técnica y seguimiento para que cada intervención respete la identidad de quien consulta."
+        "Se enfoca en planes de rejuvenecimiento y armonización con resultados sutiles. Trabaja desde el diagnóstico del rostro, la técnica precisa y el seguimiento de la evolución para sostener naturalidad."
     },
     {
       id: "s3",
       name: "Lic. Camila Pereira",
-      role: "Cosmiatra especializada en piel y protocolos faciales",
+      role: "Lic. en Cosmiatría · Piel y protocolos faciales",
       bio:
-        "Acompaña limpiezas profundas, peelings y cuidados de mantenimiento con una mirada detallista, cálida y orientada a resultados visibles."
+        "Desarrolla limpiezas profundas, peelings y cuidados de mantenimiento con evaluación del estado cutáneo, preparación de cabina e indicaciones domiciliarias para prolongar resultados."
     },
     {
       id: "s4",
       name: "Lucía Núñez",
-      role: "Experiencia del paciente y coordinación",
+      role: "Coordinación clínica · Atención al paciente",
       bio:
-        "Organiza agenda, seguimiento y acompañamiento por WhatsApp para que cada persona sepa qué esperar antes, durante y después de su tratamiento."
+        "Organiza la agenda, la admisión y el seguimiento por WhatsApp. Su rol asegura que cada paciente reciba información previa, recordatorios y acompañamiento después de cada sesión."
     }
   ],
   testimonials: [
