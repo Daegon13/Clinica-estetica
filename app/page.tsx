@@ -478,31 +478,68 @@ export default function HomePage() {
       </Container>
 
       <Container className="py-10 sm:py-14">
-        <div className="grid gap-4 rounded-[32px] bg-graphite-950 p-6 text-white shadow-soft sm:p-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
+        <div className="grid gap-5 rounded-[32px] bg-graphite-950 p-6 text-white shadow-soft sm:p-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
           <div className="max-w-3xl">
-            <div className="text-sm font-bold uppercase tracking-[0.18em] text-white/50">Reservá tu experiencia</div>
-            <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-4xl">Tu primera consulta puede ser el comienzo de un cambio sutil, cuidado y bien acompañado.</h2>
-            <p className="mt-3 text-sm text-white/75 sm:text-base">Coordiná tu valoración, conocé los tratamientos indicados para vos y avanzá con información clara sobre sesiones, tiempos y cuidados.</p>
+            <div className="text-sm font-bold uppercase tracking-[0.18em] text-white/50">Cierre de reserva</div>
+            <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-4xl">¿Lista para dar el primer paso? Pedí tu valoración y te guiamos por WhatsApp hasta dejar tu consulta confirmada.</h2>
+            <p className="mt-3 max-w-2xl text-sm text-white/75 sm:text-base">Elegimos un cierre simple: un canal principal, respuesta humana y toda la información práctica a la vista para que reservar sea fácil desde mobile y también desde Instagram.</p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-[24px] border border-white/10 bg-white/5 px-4 py-4">
+                <div className="text-[11px] font-black uppercase tracking-[0.18em] text-white/45">1. Escribís</div>
+                <div className="mt-2 text-sm font-semibold text-white">Abrís WhatsApp con mensaje precargado.</div>
+              </div>
+              <div className="rounded-[24px] border border-white/10 bg-white/5 px-4 py-4">
+                <div className="text-[11px] font-black uppercase tracking-[0.18em] text-white/45">2. Te orientamos</div>
+                <div className="mt-2 text-sm font-semibold text-white">Te recomendamos valoración o tratamiento según tu objetivo.</div>
+              </div>
+              <div className="rounded-[24px] border border-white/10 bg-white/5 px-4 py-4">
+                <div className="text-[11px] font-black uppercase tracking-[0.18em] text-white/45">3. Confirmás</div>
+                <div className="mt-2 text-sm font-semibold text-white">Coordinás horario y recibís ubicación + indicaciones previas.</div>
+              </div>
+            </div>
             <div className="mt-6 flex flex-wrap gap-2">
-              <LinkButton href="/agenda" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Agendá tu valoración</LinkButton>
-              <LeadCTA interest="general" label="Hablá por WhatsApp" variant="outline" />
-              <LinkButton href="/ubicacion" variant="outline">Contacto, ubicación y horarios</LinkButton>
+              <LeadCTA interest="general" label="Pedir valoración por WhatsApp" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300" />
+              <LinkButton href="/agenda" variant="outline">Ver horarios de valoración</LinkButton>
+            </div>
+            <p className="mt-3 text-xs text-white/55">Sin vueltas, sin formularios obligatorios y con respuesta dentro del horario de atención.</p>
+          </div>
+          <div className="grid gap-4 rounded-[28px] border border-white/10 bg-white/5 p-5">
+            <div>
+              <div className="text-sm font-bold uppercase tracking-[0.18em] text-white/50">Contacto imposible de perder</div>
+              <h3 className="mt-2 text-2xl font-black tracking-tight">Todo lo necesario para consultar ahora</h3>
+            </div>
+            <div className="grid gap-3 text-sm text-white/80">
+              <div className="rounded-[22px] border border-white/10 bg-white/5 px-4 py-3">
+                <div className="text-[11px] font-black uppercase tracking-[0.18em] text-white/45">WhatsApp prioritario</div>
+                <div className="mt-1 font-semibold">{BRAND.phone}</div>
+                <p className="mt-1 text-white/65">Canal principal para valoración, dudas y confirmación de turnos.</p>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-[22px] border border-white/10 bg-white/5 px-4 py-3">
+                  <div className="text-[11px] font-black uppercase tracking-[0.18em] text-white/45">Horarios</div>
+                  <div className="mt-1 font-semibold">{BRAND.hours}</div>
+                </div>
+                <div className="rounded-[22px] border border-white/10 bg-white/5 px-4 py-3">
+                  <div className="text-[11px] font-black uppercase tracking-[0.18em] text-white/45">Instagram</div>
+                  <div className="mt-1 font-semibold">{BRAND.instagram}</div>
+                  <p className="mt-1 text-white/65">Ideal para descubrirnos y saltar directo a WhatsApp.</p>
+                </div>
+              </div>
+              <div className="rounded-[22px] border border-white/10 bg-white/5 px-4 py-3">
+                <div className="text-[11px] font-black uppercase tracking-[0.18em] text-white/45">Ubicación</div>
+                <div className="mt-1 font-semibold">{BRAND.address}</div>
+                <p className="mt-1 text-white/65">Referencia mock coherente en {BRAND.neighborhood}, fácil de ubicar y consistente con una clínica premium.</p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <LinkButton href="/ubicacion" variant="outline">Ver mapa y cómo llegar</LinkButton>
+              <LinkButton href="/contacto" variant="outline">Quiero que me contacten</LinkButton>
             </div>
           </div>
-          <MediaCard
-            src="/brand/aesthetic/contact-lounge.svg"
-            alt="Recepción luminosa y serena de clínica estética premium"
-            eyebrow="Recepción y contacto"
-            title="Un entorno cuidado desde la llegada"
-            description="Detalles visuales sobrios para acompañar la experiencia de reserva y bienvenida en clínica."
-            sizes="(min-width: 1024px) 34vw, 100vw"
-            className="border-white/10 bg-white/5"
-            overlay="light"
-          />
         </div>
       </Container>
 
-      <Container className="pb-10 sm:pb-14">
+      <Container className="pb-28 sm:pb-14">
         <div className="grid gap-4 rounded-[32px] border border-black/5 bg-white p-5 shadow-soft dark:border-white/10 dark:bg-graphite-900 md:grid-cols-3">
           {featuredCards.map((item) => (
             <div key={item.title} className="rounded-[24px] bg-gradient-to-br from-[#fff8fb] to-[#f4fbfd] p-4 dark:bg-white/5">
