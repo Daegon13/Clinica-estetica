@@ -166,19 +166,24 @@ export default function HomePage() {
       </Container>
 
       <Container className="py-10 sm:py-14">
-        <SectionHeading eyebrow="Tratamientos destacados" title="Cuidado facial y corporal con una estética limpia y contemporánea" desc="Cada tratamiento se presenta con mejor jerarquía, más aire visual y un marco sobrio para futuras imágenes editoriales o de cabina." />
+        <SectionHeading eyebrow="Tratamientos destacados" title="Una selección breve, clara y pensada para convertir mejor" desc="Priorizamos los tratamientos más consultados para que cada opción se entienda rápido, se vea premium y tenga un siguiente paso claro." />
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Badge className="bg-white text-graphite-950">Faciales</Badge>
+          <Badge className="bg-white text-graphite-950">Láser</Badge>
+          <Badge className="bg-white text-graphite-950">Corporales</Badge>
+        </div>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service, index) => (
-            <Card key={service.id} className="overflow-hidden border border-black/10 bg-white/95">
-              <div className="relative aspect-[4/3] overflow-hidden border-b border-black/5 bg-gradient-to-br from-[#fff5f9] via-white to-[#eef8fb]">
+            <Card key={`${service.id}-${service.name}`} className="overflow-hidden border border-black/10 bg-white/95">
+              <div className="relative overflow-hidden border-b border-black/5 bg-gradient-to-br from-[#fff5f9] via-white to-[#eef8fb] p-5">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(233,191,209,0.28),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(174,221,235,0.32),transparent_30%)]" />
-                <div className="absolute inset-x-5 top-5 flex items-center justify-between gap-3">
+                <div className="relative flex items-center justify-between gap-3">
                   <Badge className="bg-white/80 text-graphite-950 shadow-sm" tone="neutral">{service.category}</Badge>
-                  <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-black/45">{index < 3 ? "Selección" : "Especializado"}</span>
+                  <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-black/45">{index < 3 ? "Más pedido" : "Tratamiento"}</span>
                 </div>
-                <div className="absolute inset-x-5 bottom-5 rounded-[24px] border border-white/70 bg-white/78 p-4 backdrop-blur">
+                <div className="relative mt-8 rounded-[24px] border border-white/70 bg-white/78 p-4 backdrop-blur">
                   <div className="text-lg font-black tracking-tight text-graphite-950">{service.name}</div>
-                  <p className="mt-2 text-sm leading-6 text-black/65">Tratamientos pensados para mejorar textura, luminosidad, contorno y bienestar con una mirada personalizada.</p>
+                  <p className="mt-2 text-sm leading-6 text-black/65">{service.name === "Valoración estética" ? "Empezá con un plan claro y personalizado." : service.name === "Depilación láser" ? "Más comodidad y menos vello en tu rutina." : service.name === "Limpieza facial profunda" ? "Glow inmediato y piel visiblemente más fresca." : service.name === "Peelings" ? "Renovación visible con protocolo a medida." : service.name === "Rejuvenecimiento facial" ? "Frescura, firmeza y aspecto descansado." : service.name === "Armonización facial" ? "Resultados naturales que respetan tu rostro." : "Contorno y bienestar en un plan adaptado a vos."}</p>
                 </div>
               </div>
               <CardContent className="grid gap-3">
@@ -187,6 +192,10 @@ export default function HomePage() {
                 <div className="grid grid-cols-2 gap-3 text-xs text-black/50 dark:text-white/55">
                   <div className="rounded-2xl bg-[#fff7fa] px-3 py-2 dark:bg-white/5">Sesión estimada: {service.durationMin} min.</div>
                   <div className="rounded-2xl bg-[#f4fbfd] px-3 py-2 dark:bg-white/5">Preparación: {service.bufferMin} min.</div>
+                </div>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  <LinkButton href="/agenda" size="sm" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Agendá este tratamiento</LinkButton>
+                  <LeadCTA interest="servicios" label="Consultar" variant="outline" className="!h-9" />
                 </div>
               </CardContent>
             </Card>
