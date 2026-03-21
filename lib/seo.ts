@@ -6,6 +6,7 @@ const siteUrl = getConfiguredPublicSiteUrl() ?? "https://example.com";
 const siteName = BRAND.name;
 
 const defaultOgImage = "/opengraph-image";
+const defaultOgAlt = `${BRAND.name} · Clínica estética premium en ${BRAND.city}`;
 
 function isNoIndexEnabled() {
   const value = process.env.NEXT_PUBLIC_DEMO_NOINDEX?.toLowerCase();
@@ -52,7 +53,7 @@ export function buildPageMetadata({
       title,
       description,
       url: canonical,
-      images: [defaultOgImage]
+      images: [{ url: defaultOgImage, width: 1200, height: 630, alt: defaultOgAlt }]
     },
     twitter: {
       card: "summary_large_image",

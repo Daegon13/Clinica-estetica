@@ -10,9 +10,9 @@ import { BRAND, SEO } from "@/lib/data";
 import { getRobotsMetadata, getSiteUrl } from "@/lib/seo";
 
 const siteUrl = getSiteUrl();
-
 const defaultTitle = SEO.defaultTitle;
 const defaultDescription = SEO.defaultDescription;
+const ogImageUrl = "/opengraph-image";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -22,23 +22,50 @@ export const metadata: Metadata = {
   },
   description: defaultDescription,
   applicationName: BRAND.name,
+  keywords: [
+    "clínica estética",
+    "medicina estética",
+    "tratamientos faciales",
+    "tratamientos corporales",
+    "depilación láser",
+    BRAND.name,
+    BRAND.city,
+    BRAND.neighborhood
+  ],
+  category: "beauty",
+  authors: [{ name: BRAND.name }],
+  creator: BRAND.name,
+  publisher: BRAND.name,
   robots: getRobotsMetadata(),
   alternates: {
     canonical: "/"
   },
+  icons: {
+    icon: [{ url: "/icon", type: "image/png", sizes: "32x32" }],
+    apple: [{ url: "/apple-icon", type: "image/png", sizes: "180x180" }]
+  },
   openGraph: {
     type: "website",
+    locale: "es_UY",
     title: defaultTitle,
     description: defaultDescription,
     siteName: BRAND.name,
     url: siteUrl,
-    images: ["/opengraph-image"]
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: `${BRAND.name} · Clínica estética premium en ${BRAND.city}`
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
     description: defaultDescription,
-    images: ["/opengraph-image"]
+    creator: BRAND.instagram,
+    images: [ogImageUrl]
   }
 };
 
@@ -47,13 +74,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     name: BRAND.name,
+    description: defaultDescription,
+    image: new URL(ogImageUrl, siteUrl).toString(),
     url: siteUrl
   };
 
   if (BRAND.address) {
     localBusinessSchema.address = {
       "@type": "PostalAddress",
-      streetAddress: BRAND.address
+      streetAddress: BRAND.address,
+      addressLocality: BRAND.city,
+      addressRegion: "Montevideo"
     };
   }
 

@@ -163,9 +163,9 @@ export default function HomePage() {
           <div className="grid gap-4 lg:pl-4">
             <MediaCard
               src="/brand/aesthetic/hero-clinic.svg"
-              alt="Clínica estética premium con ambientación luminosa y calma visual"
+              alt="Recepción y cabina de Aura Estética con ambientación luminosa y calma visual"
               eyebrow="Aura Estética"
-              title="Una experiencia de belleza serena, precisa y contemporánea"
+              title="Una experiencia estética serena, precisa y contemporánea"
               description="Tratamientos personalizados, interiores luminosos y un recorrido pensado para que te sientas segura desde el primer contacto."
               priority
               sizes="(min-width: 1024px) 46vw, (min-width: 640px) 92vw, 100vw"
@@ -192,7 +192,7 @@ export default function HomePage() {
       </div>
 
       <Container className="py-10 sm:py-14">
-        <SectionHeading eyebrow="Clínica · tratamientos · experiencia" title="Una identidad visual sobria, luminosa y coherente en cada sección" desc="El sitio presenta una narrativa más editorial para tratamientos, espacios e imagen de marca, manteniendo un layout preparado para fotografía final sin hablar de la maqueta." />
+        <SectionHeading eyebrow="Clínica · tratamientos · experiencia" title="Una identidad visual sobria, luminosa y coherente en cada sección" desc="El sitio presenta una narrativa editorial para tratamientos, espacios e imagen de marca, con una presentación sobria y consistente en todo el recorrido." />
         <div className="mt-8 grid gap-4 lg:grid-cols-3">
           {gallery.map((item) => (
             <MediaCard
