@@ -171,15 +171,15 @@ export const siteContent = {
   testimonials: [
     {
       name: "Carolina M.",
-      text: "Llegué por Instagram, escribí por WhatsApp y en minutos ya tenía mi valoración agendada. La experiencia se sintió premium desde el primer contacto."
+      text: "Me respondieron rápido, me explicaron qué podía esperar de la valoración y sentí un trato muy cuidado desde el primer mensaje."
     },
     {
       name: "Sofía R.",
-      text: "Me encantó que me explicaran qué tratamiento era para mí y cuál no. Esa honestidad me dio muchísima confianza."
+      text: "Agradecí que priorizaran un resultado natural y que me dijeran con honestidad qué tratamiento tenía sentido para mi caso."
     },
     {
       name: "Julieta L.",
-      text: "La limpieza facial y el seguimiento posterior hicieron toda la diferencia. El resultado se ve y la atención se siente cuidada."
+      text: "Hice un plan facial con seguimiento posterior y me gustó que cada cambio se fuera viendo de forma gradual, sin verse exagerado."
     }
   ],
   faqs: [

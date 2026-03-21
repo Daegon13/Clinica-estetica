@@ -89,16 +89,39 @@ const gallery = [
   }
 ];
 
-const beforeAfter = [
+const resultHighlights = [
   {
-    title: "Luminosidad y uniformidad",
-    metric: "Piel más fresca",
-    desc: "Secuencia ideal para peelings, limpiezas profundas y protocolos de glow."
+    title: "Piel más uniforme",
+    timeframe: "Protocolos de 4 a 8 semanas",
+    desc: "Ideal para limpiezas profundas, peelings y planes de renovación cuando se busca una mejora visible pero gradual.",
+    note: "La evolución suele observarse mejor con la misma luz, el mismo ángulo y una rutina indicada entre sesiones."
   },
   {
-    title: "Naturalidad en rejuvenecimiento",
-    metric: "Resultados sutiles",
-    desc: "Comparativas pensadas para mostrar mejora sin perder identidad ni expresión."
+    title: "Rejuvenecimiento sutil",
+    timeframe: "Controles según indicación profesional",
+    desc: "Comparativas pensadas para mostrar descanso, definición y frescura, sin perder expresión ni identidad.",
+    note: "No todos los cambios son inmediatos: en muchos casos la naturalidad se construye por etapas."
+  },
+  {
+    title: "Contorno y textura corporal",
+    timeframe: "Planes combinados y seguimiento",
+    desc: "Presentamos avances realistas para acompañar hábitos, aparatología y sesiones adaptadas a cada objetivo.",
+    note: "Los resultados dependen del caso, la constancia y la indicación recibida en consulta."
+  }
+];
+
+const testimonialContext = [
+  {
+    label: "reseñas verificadas",
+    value: "WhatsApp y consulta"
+  },
+  {
+    label: "tono editorial",
+    value: "breve y sobrio"
+  },
+  {
+    label: "microcopy prudente",
+    value: "sin promesas exageradas"
   }
 ];
 
@@ -223,39 +246,104 @@ export default function HomePage() {
       </Container>
 
       <Container className="py-6 sm:py-8">
-        <div className="grid gap-4 rounded-[32px] border border-black/5 bg-white p-5 shadow-soft dark:border-white/10 dark:bg-graphite-900 lg:grid-cols-[1.02fr_0.98fr] lg:p-8">
-          <div>
-            <div className="text-sm font-extrabold uppercase tracking-[0.18em] text-black/45 dark:text-white/50">Antes y después</div>
-            <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">Resultados comunicados con sensibilidad, naturalidad y criterio.</h2>
-            <p className="mt-3 max-w-2xl text-sm text-black/65 dark:text-white/70">La sección ahora acompaña comparativas de evolución con más claridad visual, manteniendo una línea elegante y evitando la estética de promoción agresiva.</p>
-          </div>
-          <div className="grid gap-3">
-            {beforeAfter.map((item, index) => (
-              <div key={item.title} className="rounded-[24px] border border-black/10 bg-gradient-to-r from-[#fff8fb] to-[#f5fbfd] p-4 dark:border-white/10 dark:bg-white/5">
-                <div className="grid gap-3 sm:grid-cols-[1fr_1fr_auto] sm:items-center">
-                  <div className="relative overflow-hidden rounded-[20px] border border-white/80 bg-[#f4e7ee] aspect-[5/4]">
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.35),rgba(229,205,216,0.8))]" />
-                    <span className="absolute left-3 top-3 rounded-full bg-white/80 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-black/45">Antes</span>
+        <div className="overflow-hidden rounded-[36px] border border-black/5 bg-[linear-gradient(180deg,#fffdfd_0%,#fff8fb_48%,#f7fbfd_100%)] shadow-soft">
+          <div className="grid gap-8 px-5 py-8 sm:px-8 sm:py-10 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
+            <div>
+              <SectionHeading
+                eyebrow="Resultados"
+                title="Evolución visible, contada con sensibilidad clínica y una estética sobria"
+                desc="Reordenamos la sección para que la prueba visual se vea más creíble: comparativas limpias, contexto de tratamiento y notas prudentes sobre tiempos y variabilidad."
+              />
+              <div className="mt-6 grid gap-3">
+                <div className="rounded-[28px] border border-black/8 bg-white/90 p-5 shadow-[0_16px_40px_rgba(15,23,42,0.06)]">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <Badge className="bg-[#f5eef2] text-graphite-950">Antes y después</Badge>
+                    <Badge className="bg-[#eef8fb] text-graphite-950">Mismo ángulo · luz similar</Badge>
                   </div>
-                  <div className="relative overflow-hidden rounded-[20px] border border-white/80 bg-[#e9f4f8] aspect-[5/4]">
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.2),rgba(194,228,236,0.78))]" />
-                    <span className="absolute left-3 top-3 rounded-full bg-white/80 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-black/45">Después</span>
-                  </div>
-                  <div className="sm:max-w-[190px]">
-                    <div className="text-[11px] font-black uppercase tracking-[0.16em] text-black/40 dark:text-white/45">{item.metric}</div>
-                    <div className="mt-1 text-base font-extrabold text-graphite-950 dark:text-white">{item.title}</div>
-                    <p className="mt-2 text-sm leading-6 text-black/65 dark:text-white/70">{item.desc}</p>
+                  <p className="mt-4 text-sm leading-6 text-black/65">
+                    Las comparativas acompañan la decisión cuando muestran evolución real y bien documentada. Por eso proponemos imágenes consistentes, sin edición invasiva y con una lectura clara del objetivo tratado.
+                  </p>
+                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                    <div className="rounded-[24px] border border-black/8 bg-[#fcf5f8] p-4">
+                      <div className="text-[11px] font-black uppercase tracking-[0.16em] text-black/40">Qué comunicar</div>
+                      <ul className="mt-3 grid gap-2 text-sm text-black/65">
+                        <li>• Mejoras de textura, luminosidad o definición.</li>
+                        <li>• Tiempos orientativos y necesidad de seguimiento.</li>
+                        <li>• Objetivos realistas según valoración inicial.</li>
+                      </ul>
+                    </div>
+                    <div className="rounded-[24px] border border-black/8 bg-[#f4fbfd] p-4">
+                      <div className="text-[11px] font-black uppercase tracking-[0.16em] text-black/40">Microcopy sugerido</div>
+                      <p className="mt-3 text-sm leading-6 text-black/65">
+                        “Cada plan se indica de forma personalizada. La evolución puede variar según tu piel, tus hábitos y el tratamiento seleccionado.”
+                      </p>
+                    </div>
                   </div>
                 </div>
-                {index === 0 ? <div className="mt-3 text-xs text-black/45 dark:text-white/50">Comparativas sugeridas con mismo ángulo, luz similar y edición suave para una lectura más profesional.</div> : null}
+                <div className="grid gap-3 sm:grid-cols-3">
+                  {resultHighlights.map((item) => (
+                    <Card key={item.title} className="border border-black/8 bg-white/92 shadow-[0_16px_36px_rgba(15,23,42,0.05)]">
+                      <CardContent className="grid gap-3 p-5">
+                        <div>
+                          <div className="text-[11px] font-black uppercase tracking-[0.16em] text-black/40">{item.timeframe}</div>
+                          <div className="mt-2 text-lg font-extrabold tracking-tight text-graphite-950">{item.title}</div>
+                        </div>
+                        <p className="text-sm leading-6 text-black/65">{item.desc}</p>
+                        <p className="text-xs leading-5 text-black/48">{item.note}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
-            ))}
+            </div>
+
+            <div className="grid gap-4">
+              {resultHighlights.slice(0, 2).map((item, index) => (
+                <div key={item.title} className="rounded-[28px] border border-black/8 bg-white/88 p-4 shadow-[0_18px_50px_rgba(15,23,42,0.06)] sm:p-5">
+                  <div className="grid gap-4 md:grid-cols-[1fr_1fr]">
+                    <div className="relative overflow-hidden rounded-[24px] border border-black/8 bg-[#f3e5ec] aspect-[4/5]">
+                      <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(255,255,255,0.32),rgba(229,205,216,0.92))]" />
+                      <span className="absolute left-3 top-3 rounded-full bg-white/88 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-black/45">Antes</span>
+                      <div className="absolute inset-x-3 bottom-3 rounded-[18px] border border-white/60 bg-white/55 p-3 backdrop-blur">
+                        <div className="text-[11px] font-black uppercase tracking-[0.14em] text-black/40">Registro inicial</div>
+                        <p className="mt-1 text-xs leading-5 text-black/60">Condición previa documentada para evaluar evolución con el mismo encuadre.</p>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-[24px] border border-black/8 bg-[#e7f2f7] aspect-[4/5]">
+                      <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(255,255,255,0.2),rgba(194,228,236,0.88))]" />
+                      <span className="absolute left-3 top-3 rounded-full bg-white/88 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-black/45">Después</span>
+                      <div className="absolute inset-x-3 bottom-3 rounded-[18px] border border-white/60 bg-white/55 p-3 backdrop-blur">
+                        <div className="text-[11px] font-black uppercase tracking-[0.14em] text-black/40">Seguimiento</div>
+                        <p className="mt-1 text-xs leading-5 text-black/60">Mejora comunicada sin exagerar: se prioriza textura, descanso y naturalidad.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 grid gap-3 lg:grid-cols-[1fr_auto] lg:items-end">
+                    <div>
+                      <div className="text-[11px] font-black uppercase tracking-[0.16em] text-black/40">Caso ejemplo {index + 1}</div>
+                      <div className="mt-1 text-lg font-extrabold text-graphite-950">{item.title}</div>
+                      <p className="mt-2 text-sm leading-6 text-black/65">{item.desc}</p>
+                    </div>
+                    <div className="rounded-[22px] border border-black/8 bg-[#fffafb] px-4 py-3 text-sm text-black/55 lg:max-w-[220px]">
+                      <span className="font-semibold text-black/70">Nota profesional:</span> {item.note}
+                    </div>
+                  </div>
+                </div>
+              ))}
+              <Card className="border border-black/8 bg-graphite-950 text-white shadow-[0_28px_70px_rgba(15,23,42,0.18)]">
+                <CardContent className="grid gap-3 p-6">
+                  <div className="text-xs font-black uppercase tracking-[0.18em] text-white/45">Prueba visual responsable</div>
+                  <h3 className="text-2xl font-black tracking-tight">Menos efecto publicitario, más contexto para decidir con confianza.</h3>
+                  <p className="text-sm leading-6 text-white/72">Las imágenes acompañan la credibilidad cuando explican qué se trató, cuánto tiempo pasó y qué cuidados formaron parte del proceso.</p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </Container>
 
       <Container className="py-10 sm:py-12">
-        <div className="overflow-hidden rounded-[36px] border border-black/8 bg-[linear-gradient(180deg,#fffdfd_0%,#fff8fb_48%,#f7fbfd_100%)] shadow-soft">
+        <div className="overflow-hidden rounded-[36px] border border-black/8 bg-[linear-gradient(180deg,#fffdfd_0%,#fff7fb_55%,#f6fbfd_100%)] shadow-soft">
           <div className="grid gap-8 px-5 py-8 sm:px-8 sm:py-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
             <div>
               <SectionHeading eyebrow="Cómo trabajamos" title="Metodología clara para decidir con tranquilidad y tratar con criterio" desc="Ordenamos la experiencia en tres etapas para que el sitio se perciba como una clínica real: evaluación, indicación personalizada y seguimiento responsable." />
@@ -332,16 +420,38 @@ export default function HomePage() {
       </Container>
 
       <Container className="py-10 sm:py-12">
-        <SectionHeading eyebrow="Testimonios" title="Confianza, contención y una experiencia que se siente cuidada" desc="Reseñas breves para reforzar seguridad, claridad y deseo de reservar." />
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
-          {TESTIMONIALS.map((item) => (
-            <Card key={item.name} className="border border-black/10 bg-white/92">
-              <CardContent className="grid gap-3">
-                <p className="text-sm text-black/70 dark:text-white/75">“{item.text}”</p>
-                <div className="text-sm font-extrabold">{item.name}</div>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="grid gap-6 rounded-[36px] border border-black/8 bg-white p-5 shadow-soft sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <SectionHeading eyebrow="Testimonios" title="Prueba social que acompaña la decisión sin recargar la experiencia" desc="Reescribimos la sección para que las reseñas suenen más cercanas a una clínica estética real: foco en claridad, trato y resultados medidos." />
+            <div className="mt-6 grid gap-3">
+              {testimonialContext.map((item) => (
+                <div key={item.label} className="flex items-center justify-between rounded-[22px] border border-black/8 bg-[linear-gradient(90deg,#fff8fb,#f6fbfd)] px-4 py-3 text-sm">
+                  <span className="font-semibold uppercase tracking-[0.12em] text-black/40">{item.label}</span>
+                  <span className="text-black/65">{item.value}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-5 text-xs leading-5 text-black/45">
+              Las reseñas refuerzan percepción de confianza y acompañamiento. Evitamos frases de “resultado garantizado” o cambios desmedidos para cuidar el tono premium y profesional.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+            {TESTIMONIALS.map((item, index) => (
+              <Card key={item.name} className="border border-black/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,251,252,0.96))] shadow-[0_18px_40px_rgba(15,23,42,0.05)]">
+                <CardContent className="grid h-full gap-4 p-5">
+                  <div className="flex items-center justify-between gap-3">
+                    <Badge className="bg-[#f5eef2] text-graphite-950">Paciente</Badge>
+                    <span className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">0{index + 1}</span>
+                  </div>
+                  <p className="text-sm leading-6 text-black/72">“{item.text}”</p>
+                  <div className="mt-auto border-t border-black/6 pt-3">
+                    <div className="text-sm font-extrabold text-graphite-950">{item.name}</div>
+                    <div className="mt-1 text-xs uppercase tracking-[0.12em] text-black/42">Valoración y seguimiento</div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </Container>
 
