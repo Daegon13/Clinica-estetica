@@ -129,21 +129,21 @@ export default function HomePage() {
   return (
     <div>
       <div className="bg-gradient-to-b from-white via-[#fff8fb] to-warm-100 dark:from-graphite-950 dark:via-graphite-950 dark:to-graphite-900">
-        <Container className="grid gap-10 py-10 sm:py-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
+        <Container className="grid gap-10 py-8 sm:py-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:py-14">
           <div className="grid gap-5">
             <Badge className="w-fit" tone="neutral">{HERO.badge}</Badge>
-            <h1 className="max-w-2xl text-3xl font-black tracking-tight sm:text-5xl">{HERO.title}</h1>
-            <p className="max-w-xl text-sm text-black/60 dark:text-white/70 sm:text-lg">{HERO.description}</p>
-            <ul className="grid gap-1 text-sm text-black/65 dark:text-white/70">
+            <h1 className="max-w-2xl text-balance text-3xl font-black tracking-tight sm:text-5xl lg:text-[3.35rem]">{HERO.title}</h1>
+            <p className="max-w-xl text-base leading-7 text-black/65 dark:text-white/70 sm:text-lg">{HERO.description}</p>
+            <ul className="grid gap-2 text-sm leading-6 text-black/65 dark:text-white/70">
               {HERO.bullets.map((bullet) => <li key={bullet}>• {bullet}</li>)}
             </ul>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               <LinkButton href="/agenda" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Agendá tu valoración</LinkButton>
               <LeadCTA interest="general" label="Resolver dudas por WhatsApp" variant="outline" />
               <LinkButton href="/contacto" variant="outline">Quiero que me contacten</LinkButton>
             </div>
             <p className="text-xs text-black/50 dark:text-white/55">Si todavía no sabés qué tratamiento elegir, empezá por una valoración y te orientamos sin vueltas.</p>
-            <div className="grid gap-3 pt-2 sm:grid-cols-3">
+            <div className="grid gap-3 pt-2 md:grid-cols-3">
               <div className="rounded-[24px] border border-black/10 bg-white/70 px-4 py-3 shadow-soft">
                 <div className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">Tratamientos</div>
                 <div className="mt-1 text-lg font-black text-graphite-950">Faciales y corporales</div>
@@ -191,7 +191,7 @@ export default function HomePage() {
         </Container>
       </div>
 
-      <Container className="py-10 sm:py-14">
+      <Container className="content-auto py-10 sm:py-14">
         <SectionHeading eyebrow="Clínica · tratamientos · experiencia" title="Una identidad visual sobria, luminosa y coherente en cada sección" desc="El sitio presenta una narrativa editorial para tratamientos, espacios e imagen de marca, con una presentación sobria y consistente en todo el recorrido." />
         <div className="mt-8 grid gap-4 lg:grid-cols-3">
           {gallery.map((item) => (
@@ -208,14 +208,14 @@ export default function HomePage() {
         </div>
       </Container>
 
-      <Container className="py-10 sm:py-14">
+      <Container className="content-auto py-10 sm:py-14">
         <SectionHeading eyebrow="Tratamientos destacados" title="Una selección breve, clara y pensada para convertir mejor" desc="Priorizamos los tratamientos más consultados para que cada opción se entienda rápido, se vea premium y tenga un siguiente paso claro." />
         <div className="mt-4 flex flex-wrap gap-2">
           <Badge className="bg-white text-graphite-950">Faciales</Badge>
           <Badge className="bg-white text-graphite-950">Láser</Badge>
           <Badge className="bg-white text-graphite-950">Corporales</Badge>
         </div>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {SERVICES.map((service, index) => (
             <Card key={`${service.id}-${service.name}`} className="overflow-hidden border border-black/10 bg-white/95">
               <div className="relative overflow-hidden border-b border-black/5 bg-gradient-to-br from-[#fff5f9] via-white to-[#eef8fb] p-5">
@@ -232,7 +232,7 @@ export default function HomePage() {
               <CardContent className="grid gap-3">
                 <Badge className="w-fit" tone="neutral">Desde {service.priceFrom}</Badge>
                 <p className="text-sm text-black/60 dark:text-white/70">{service.desc}</p>
-                <div className="grid grid-cols-2 gap-3 text-xs text-black/50 dark:text-white/55">
+                <div className="grid gap-3 text-xs text-black/55 dark:text-white/55 sm:grid-cols-2">
                   <div className="rounded-2xl bg-[#fff7fa] px-3 py-2 dark:bg-white/5">Sesión estimada: {service.durationMin} min.</div>
                   <div className="rounded-2xl bg-[#f4fbfd] px-3 py-2 dark:bg-white/5">Preparación: {service.bufferMin} min.</div>
                 </div>
@@ -246,7 +246,7 @@ export default function HomePage() {
         </div>
       </Container>
 
-      <Container className="py-6 sm:py-8">
+      <Container className="content-auto py-6 sm:py-8">
         <div className="overflow-hidden rounded-[36px] border border-black/5 bg-[linear-gradient(180deg,#fffdfd_0%,#fff8fb_48%,#f7fbfd_100%)] shadow-soft">
           <div className="grid gap-8 px-5 py-8 sm:px-8 sm:py-10 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
             <div>
@@ -281,7 +281,7 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-                <div className="grid gap-3 sm:grid-cols-3">
+                <div className="grid gap-3 lg:grid-cols-3">
                   {resultHighlights.map((item) => (
                     <Card key={item.title} className="border border-black/8 bg-white/92 shadow-[0_16px_36px_rgba(15,23,42,0.05)]">
                       <CardContent className="grid gap-3 p-5">
@@ -343,7 +343,7 @@ export default function HomePage() {
         </div>
       </Container>
 
-      <Container className="py-10 sm:py-12">
+      <Container className="content-auto py-10 sm:py-12">
         <div className="overflow-hidden rounded-[36px] border border-black/8 bg-[linear-gradient(180deg,#fffdfd_0%,#fff7fb_55%,#f6fbfd_100%)] shadow-soft">
           <div className="grid gap-8 px-5 py-8 sm:px-8 sm:py-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
             <div>
@@ -386,7 +386,7 @@ export default function HomePage() {
         </div>
       </Container>
 
-      <Container className="py-10 sm:py-12">
+      <Container className="content-auto py-10 sm:py-12">
         <SectionHeading eyebrow="Equipo profesional" title="Un equipo interdisciplinario que suma criterio clínico, técnica y seguimiento cercano" desc="Presentamos perfiles verosímiles, roles claros y una voz profesional para que la clínica se sienta consistente desde la primera visita al sitio." />
         <div className="mt-8 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
           <MediaCard
@@ -420,7 +420,7 @@ export default function HomePage() {
         </div>
       </Container>
 
-      <Container className="py-10 sm:py-12">
+      <Container className="content-auto py-10 sm:py-12">
         <div className="grid gap-6 rounded-[36px] border border-black/8 bg-white p-5 shadow-soft sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
             <SectionHeading eyebrow="Testimonios" title="Prueba social que acompaña la decisión sin recargar la experiencia" desc="Reescribimos la sección para que las reseñas suenen más cercanas a una clínica estética real: foco en claridad, trato y resultados medidos." />
@@ -436,7 +436,7 @@ export default function HomePage() {
               Las reseñas refuerzan percepción de confianza y acompañamiento. Evitamos frases de “resultado garantizado” o cambios desmedidos para cuidar el tono premium y profesional.
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {TESTIMONIALS.map((item, index) => (
               <Card key={item.name} className="border border-black/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,251,252,0.96))] shadow-[0_18px_40px_rgba(15,23,42,0.05)]">
                 <CardContent className="grid h-full gap-4 p-5">
@@ -456,7 +456,7 @@ export default function HomePage() {
         </div>
       </Container>
 
-      <Container className="py-10 sm:py-12">
+      <Container className="content-auto py-10 sm:py-12">
         <SectionHeading eyebrow="FAQ" title="Dudas frecuentes antes de reservar" desc="Respondemos objeciones habituales para que puedas decidir con más claridad, incluso si recién nos conocés por Instagram." />
         <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-[24px] border border-black/10 bg-white/80 px-4 py-3 text-sm text-black/62 shadow-soft dark:border-white/10 dark:bg-white/5 dark:text-white/70">
           <p>¿Preferís resolverlo rápido? Te orientamos según tu objetivo, tiempos y tipo de tratamiento.</p>
@@ -483,7 +483,7 @@ export default function HomePage() {
             <div className="text-sm font-bold uppercase tracking-[0.18em] text-white/50">Cierre de reserva</div>
             <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-4xl">¿Lista para dar el primer paso? Pedí tu valoración y te guiamos por WhatsApp hasta dejar tu consulta confirmada.</h2>
             <p className="mt-3 max-w-2xl text-sm text-white/75 sm:text-base">Elegimos un cierre simple: un canal principal, respuesta humana y toda la información práctica a la vista para que reservar sea fácil desde mobile y también desde Instagram.</p>
-            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            <div className="mt-5 grid gap-3 lg:grid-cols-3">
               <div className="rounded-[24px] border border-white/10 bg-white/5 px-4 py-4">
                 <div className="text-[11px] font-black uppercase tracking-[0.18em] text-white/45">1. Escribís</div>
                 <div className="mt-2 text-sm font-semibold text-white">Abrís WhatsApp con mensaje precargado.</div>
@@ -540,7 +540,7 @@ export default function HomePage() {
       </Container>
 
       <Container className="pb-28 sm:pb-14">
-        <div className="grid gap-4 rounded-[32px] border border-black/5 bg-white p-5 shadow-soft dark:border-white/10 dark:bg-graphite-900 md:grid-cols-3">
+        <div className="grid gap-4 rounded-[32px] border border-black/5 bg-white p-5 shadow-soft dark:border-white/10 dark:bg-graphite-900 md:grid-cols-3 content-auto">
           {featuredCards.map((item) => (
             <div key={item.title} className="rounded-[24px] bg-gradient-to-br from-[#fff8fb] to-[#f4fbfd] p-4 dark:bg-white/5">
               <div className="text-sm font-extrabold">{item.title}</div>

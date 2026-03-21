@@ -4,7 +4,7 @@ import { Container, LinkButton } from "./ui";
 export function Footer() {
   return (
     <footer className="mt-16 border-t border-black/5 bg-white dark:bg-graphite-950">
-      <Container className="grid gap-6 py-10 sm:grid-cols-2">
+      <Container className="grid gap-8 py-10 sm:grid-cols-2 lg:gap-10">
         <div className="grid gap-3">
           <div>
             <div className="text-sm font-extrabold">{BRAND.name}</div>
@@ -14,7 +14,7 @@ export function Footer() {
         </div>
 
         <div className="grid gap-3 sm:justify-items-end">
-          <div className="text-sm font-semibold text-black/80 dark:text-white/75 sm:text-right">Reservá tu valoración, resolvé dudas por WhatsApp o coordiná tu consulta en una experiencia premium y simple.</div>
+          <div className="text-balance text-sm font-semibold leading-6 text-black/80 dark:text-white/75 sm:text-right">Reservá tu valoración, resolvé dudas por WhatsApp o coordiná tu consulta en una experiencia premium y simple.</div>
           <div className="flex flex-wrap gap-2 sm:justify-end">
             <LinkButton href="/agenda" variant="outline">Agendá tu valoración</LinkButton>
             <LinkButton href={`https://wa.me/${BRAND.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noreferrer" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Hablá por WhatsApp</LinkButton>

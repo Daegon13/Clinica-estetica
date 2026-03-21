@@ -43,3 +43,25 @@ select:focus-visible {
     animation: none !important;
   }
 }
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    text-wrap: pretty;
+  }
+}
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 960px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

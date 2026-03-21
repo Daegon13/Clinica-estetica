@@ -51,12 +51,12 @@ const commercialBadges: Record<string, string> = {
 export default function ServicesPage() {
   return (
     <div className="bg-gradient-to-b from-white via-[#fff9fb] to-warm-100 dark:from-graphite-950 dark:to-graphite-900">
-      <Container className="grid gap-10 py-10 sm:py-14">
+      <Container className="content-auto grid gap-10 py-8 sm:py-12 lg:py-14">
         <section className="grid gap-4">
           <Badge className="w-fit">TRATAMIENTOS</Badge>
-          <h1 className="text-3xl font-black tracking-tight sm:text-4xl">Tratamientos elegidos para verse bien, decidir rápido y reservar con confianza</h1>
-          <p className="max-w-3xl text-sm text-black/65 dark:text-white/70 sm:text-base">En {BRAND.name} concentramos la propuesta en los tratamientos que más consultan y mejor se entienden: una selección breve, premium y orientada a resultados visibles con criterio profesional.</p>
-          <ul className="grid gap-1 text-sm text-black/65 dark:text-white/70">
+          <h1 className="text-balance text-3xl font-black tracking-tight sm:text-4xl lg:text-[2.8rem]">Tratamientos elegidos para verse bien, decidir rápido y reservar con confianza</h1>
+          <p className="max-w-3xl text-sm leading-7 text-black/65 dark:text-white/70 sm:text-base">En {BRAND.name} concentramos la propuesta en los tratamientos que más consultan y mejor se entienden: una selección breve, premium y orientada a resultados visibles con criterio profesional.</p>
+          <ul className="grid gap-2 text-sm leading-6 text-black/65 dark:text-white/70">
             <li>• Menos opciones, más claridad para elegir el tratamiento indicado.</li>
             <li>• Beneficios concretos, lenguaje simple y una experiencia coherente con una marca premium.</li>
             <li>• CTA directos para agendar valoración o resolver dudas antes de reservar.</li>
@@ -88,7 +88,7 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {SERVICES.map((s) => (
               <Card key={`${s.id}-${s.name}`} className="overflow-hidden border border-black/10 bg-white/95">
                 <div className="relative border-b border-black/5 bg-gradient-to-br from-[#fff6f9] via-white to-[#eef8fb] p-5">
@@ -104,12 +104,12 @@ export default function ServicesPage() {
                 </div>
                 <CardContent className="grid gap-4">
                   <p className="text-sm leading-6 text-black/65 dark:text-white/70">{s.desc}</p>
-                  <div className="grid grid-cols-3 gap-3 text-sm">
+                  <div className="grid gap-3 text-sm sm:grid-cols-3">
                     <div><div className="text-[11px] font-semibold text-black/50 dark:text-white/55">Sesión</div><div className="font-bold">{s.durationMin} min</div></div>
                     <div><div className="text-[11px] font-semibold text-black/50 dark:text-white/55">Preparación</div><div className="font-bold">{s.bufferMin} min</div></div>
                     <div><div className="text-[11px] font-semibold text-black/50 dark:text-white/55">Desde</div><div className="font-bold">{s.priceFrom}</div></div>
                   </div>
-                  <div className="flex flex-wrap gap-2 pt-1">
+                  <div className="flex flex-wrap gap-2.5 pt-1">
                     <LinkButton href="/agenda" size="sm" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Quiero este tratamiento</LinkButton>
                     <LeadCTA interest="servicios" label="Consultar" variant="outline" className="!h-9" />
                   </div>

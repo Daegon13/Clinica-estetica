@@ -2,23 +2,23 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 export function Container({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8", className)} {...props} />;
+  return <div className={cn("mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 xl:px-10", className)} {...props} />;
 }
 
 export function Card({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn("rounded-2xl bg-white shadow-soft ring-1 ring-black/5 dark:bg-graphite-900 dark:ring-white/10", className)}
+      className={cn("rounded-[26px] bg-white shadow-soft ring-1 ring-black/5 dark:bg-graphite-900 dark:ring-white/10", className)}
       {...props}
     />
   );
 }
 
 export function CardHeader({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("border-b border-black/5 p-5 sm:p-6 dark:border-white/10", className)} {...props} />;
+  return <div className={cn("border-b border-black/5 p-5 sm:p-6 lg:p-7 dark:border-white/10", className)} {...props} />;
 }
 export function CardContent({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("p-5 sm:p-6", className)} {...props} />;
+  return <div className={cn("p-5 sm:p-6 lg:p-7", className)} {...props} />;
 }
 
 export function Badge({ className, tone = "neutral", ...props }: React.HTMLAttributes<HTMLSpanElement> & { tone?: "neutral" | "good" | "warn" | "bad" }) {
@@ -28,7 +28,7 @@ export function Badge({ className, tone = "neutral", ...props }: React.HTMLAttri
     warn: "bg-amber-100 text-amber-900",
     bad: "bg-rose-100 text-rose-800"
   };
-  return <span className={cn("inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium", tones[tone], className)} {...props} />;
+  return <span className={cn("inline-flex items-center gap-1 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em]", tones[tone], className)} {...props} />;
 }
 
 export function Button({
@@ -42,11 +42,11 @@ export function Button({
     ghost: "bg-transparent hover:bg-black/5 dark:hover:bg-white/10",
     outline: "bg-white border border-black/10 hover:bg-black/5 dark:bg-graphite-900 dark:border-white/15 dark:hover:bg-white/10"
   };
-  const sizes = { sm: "h-9 px-3 text-sm", md: "h-11 px-4 text-sm" };
+  const sizes = { sm: "min-h-10 px-3.5 text-sm", md: "min-h-11 px-4.5 text-sm" };
   return (
     <button
       className={cn(
-        "inline-flex items-center justify-center rounded-xl font-semibold transition shadow-sm disabled:opacity-50 disabled:pointer-events-none",
+        "inline-flex items-center justify-center rounded-xl font-semibold transition duration-200 shadow-sm ring-1 ring-black/5 disabled:pointer-events-none disabled:opacity-50 dark:ring-white/10",
         variants[variant],
         sizes[size],
         className
@@ -67,11 +67,11 @@ export function LinkButton({
     ghost: "bg-transparent hover:bg-black/5 dark:hover:bg-white/10",
     outline: "bg-white border border-black/10 hover:bg-black/5 dark:bg-graphite-900 dark:border-white/15 dark:hover:bg-white/10"
   };
-  const sizes = { sm: "h-9 px-3 text-sm", md: "h-11 px-4 text-sm" };
+  const sizes = { sm: "min-h-10 px-3.5 text-sm", md: "min-h-11 px-4.5 text-sm" };
   return (
     <a
       className={cn(
-        "inline-flex items-center justify-center rounded-xl font-semibold transition shadow-sm",
+        "inline-flex items-center justify-center rounded-xl font-semibold transition duration-200 shadow-sm ring-1 ring-black/5 dark:ring-white/10",
         variants[variant],
         sizes[size],
         className

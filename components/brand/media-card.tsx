@@ -37,7 +37,7 @@ export function MediaCard({
           fill
           priority={priority}
           sizes={sizes}
-          className={cn("object-cover transition duration-500 group-hover:scale-[1.03]", imageClassName)}
+          className={cn("object-cover object-center transition duration-500 group-hover:scale-[1.03]", imageClassName)}
         />
         {overlay !== "none" ? (
           <div
@@ -50,11 +50,11 @@ export function MediaCard({
           />
         ) : null}
         {eyebrow || title || description ? (
-          <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-            <div className="max-w-md rounded-3xl border border-white/60 bg-white/78 p-4 shadow-soft backdrop-blur dark:border-white/15 dark:bg-graphite-950/70">
-              {eyebrow ? <div className="text-[11px] font-black uppercase tracking-[0.22em] text-black/45 dark:text-white/45">{eyebrow}</div> : null}
-              {title ? <div className="mt-1 text-lg font-black tracking-tight text-graphite-950 dark:text-white">{title}</div> : null}
-              {description ? <p className="mt-2 text-sm leading-6 text-black/65 dark:text-white/70">{description}</p> : null}
+          <div className="absolute inset-x-0 bottom-0 p-3 sm:p-5">
+            <div className="max-w-md rounded-[26px] border border-white/60 bg-white/82 p-4 shadow-soft backdrop-blur dark:border-white/15 dark:bg-graphite-950/72 sm:p-5">
+              {eyebrow ? <div className="text-[11px] font-black uppercase tracking-[0.2em] text-black/50 dark:text-white/50">{eyebrow}</div> : null}
+              {title ? <div className="mt-1 text-balance text-base font-black tracking-tight text-graphite-950 dark:text-white sm:text-lg">{title}</div> : null}
+              {description ? <p className="mt-2 text-sm leading-6 text-black/70 dark:text-white/72">{description}</p> : null}
             </div>
           </div>
         ) : null}
