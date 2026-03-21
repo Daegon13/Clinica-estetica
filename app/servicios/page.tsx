@@ -38,25 +38,35 @@ const gallery = [
   }
 ];
 
+const commercialBadges: Record<string, string> = {
+  "Valoración estética": "Empezá acá",
+  "Depilación láser": "Alta demanda",
+  "Limpieza facial profunda": "Glow inmediato",
+  Peelings: "Renovación",
+  "Rejuvenecimiento facial": "Resultados sutiles",
+  "Armonización facial": "Premium",
+  "Tratamientos corporales": "Plan personalizado"
+};
+
 export default function ServicesPage() {
   return (
     <div className="bg-gradient-to-b from-white via-[#fff9fb] to-warm-100 dark:from-graphite-950 dark:to-graphite-900">
       <Container className="grid gap-10 py-10 sm:py-14">
         <section className="grid gap-4">
           <Badge className="w-fit">TRATAMIENTOS</Badge>
-          <h1 className="text-3xl font-black tracking-tight sm:text-4xl">Tratamientos estéticos premium para rostro, cuerpo y cuidado integral</h1>
-          <p className="max-w-2xl text-sm text-black/65 dark:text-white/70 sm:text-base">En {BRAND.name} combinamos valoración profesional, tecnología y protocolos personalizados para que cada tratamiento tenga sentido estético, criterio clínico y una experiencia de alto nivel.</p>
+          <h1 className="text-3xl font-black tracking-tight sm:text-4xl">Tratamientos elegidos para verse bien, decidir rápido y reservar con confianza</h1>
+          <p className="max-w-3xl text-sm text-black/65 dark:text-white/70 sm:text-base">En {BRAND.name} concentramos la propuesta en los tratamientos que más consultan y mejor se entienden: una selección breve, premium y orientada a resultados visibles con criterio profesional.</p>
           <ul className="grid gap-1 text-sm text-black/65 dark:text-white/70">
-            <li>• Planes faciales y corporales diseñados según tu objetivo y tu punto de partida.</li>
-            <li>• Indicaciones claras antes y después de cada sesión para cuidar el resultado.</li>
-            <li>• Una presentación visual más limpia, coherente y alineada a una clínica estética premium.</li>
+            <li>• Menos opciones, más claridad para elegir el tratamiento indicado.</li>
+            <li>• Beneficios concretos, lenguaje simple y una experiencia coherente con una marca premium.</li>
+            <li>• CTA directos para agendar valoración o resolver dudas antes de reservar.</li>
           </ul>
         </section>
 
         <section className="grid gap-4 rounded-[32px] border border-black/5 bg-white/80 p-5 shadow-soft dark:border-white/10 dark:bg-graphite-900/70 sm:p-6">
           <div className="flex items-center justify-between gap-3">
-            <h2 className="text-sm font-extrabold tracking-wide">Ambientes y tratamientos</h2>
-            <span className="text-xs text-black/50 dark:text-white/55">Rostro, cuerpo y espacios</span>
+            <h2 className="text-sm font-extrabold tracking-wide">Rostro, cuerpo y experiencia</h2>
+            <span className="text-xs text-black/50 dark:text-white/55">Curaduría comercial premium</span>
           </div>
           <div className="grid gap-4 lg:grid-cols-3">
             {gallery.map((item) => (
@@ -65,32 +75,43 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="grid gap-4">
-          <div className="grid gap-2">
-            <h2 className="text-xl font-extrabold sm:text-2xl">Listado de tratamientos</h2>
-            <p className="max-w-2xl text-sm text-black/60 dark:text-white/65">Duración estimada, referencia de inversión y una presentación más editorial para que cada propuesta se sienta parte de una misma identidad de marca.</p>
+        <section className="grid gap-5">
+          <div className="grid gap-2 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <h2 className="text-xl font-extrabold sm:text-2xl">Selección de tratamientos</h2>
+              <p className="max-w-2xl text-sm text-black/60 dark:text-white/65">Cada propuesta tiene un nombre claro, un beneficio fácil de entender y una invitación concreta a dar el siguiente paso.</p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-white text-graphite-950">Faciales</Badge>
+              <Badge className="bg-white text-graphite-950">Láser</Badge>
+              <Badge className="bg-white text-graphite-950">Corporales</Badge>
+            </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((s, index) => (
-              <Card key={s.id} className="overflow-hidden border border-black/10 bg-white/95">
-                <div className="relative aspect-[5/4] border-b border-black/5 bg-gradient-to-br from-[#fff6f9] via-white to-[#eef8fb]">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(234,200,217,0.36),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(191,226,236,0.34),transparent_28%)]" />
-                  <div className="absolute inset-x-4 top-4 flex items-center justify-between gap-3">
-                    <Badge className="bg-white/85 text-graphite-950 shadow-sm">{s.category}</Badge>
-                    <span className="rounded-full border border-white/75 bg-white/80 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-black/45">{index < 3 ? "Destacado" : "Plan"}</span>
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {SERVICES.map((s) => (
+              <Card key={`${s.id}-${s.name}`} className="overflow-hidden border border-black/10 bg-white/95">
+                <div className="relative border-b border-black/5 bg-gradient-to-br from-[#fff6f9] via-white to-[#eef8fb] p-5">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(234,200,217,0.24),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(191,226,236,0.28),transparent_28%)]" />
+                  <div className="relative flex items-start justify-between gap-3">
+                    <Badge className="bg-white/90 text-graphite-950 shadow-sm">{s.category}</Badge>
+                    <span className="rounded-full border border-white/75 bg-white/85 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-black/45">{commercialBadges[s.name]}</span>
                   </div>
-                  <div className="absolute inset-x-4 bottom-4 rounded-[24px] border border-white/75 bg-white/80 p-4 backdrop-blur">
+                  <div className="relative mt-6 grid gap-2">
                     <div className="text-lg font-black tracking-tight text-graphite-950">{s.name}</div>
-                    <p className="mt-2 text-sm leading-6 text-black/65">Una propuesta cuidada para acompañar resultados visibles con una experiencia serena y profesional.</p>
+                    <p className="text-sm font-medium text-black/70">{s.name === "Valoración estética" ? "Descubrí qué tratamiento te conviene antes de invertir." : s.name === "Depilación láser" ? "Menos vello, más comodidad y una rutina más simple." : s.name === "Limpieza facial profunda" ? "Piel más limpia, fresca y luminosa desde la primera sesión." : s.name === "Peelings" ? "Renová la piel y devolvele uniformidad sin complicarte." : s.name === "Rejuvenecimiento facial" ? "Recuperá frescura con un plan pensado para verte descansada." : s.name === "Armonización facial" ? "Realzá tu rostro con equilibrio, naturalidad y buen criterio." : "Mejorá contorno y textura con protocolos adaptados a vos."}</p>
                   </div>
                 </div>
                 <CardContent className="grid gap-4">
-                  <p className="text-sm text-black/65 dark:text-white/70">{s.desc}</p>
+                  <p className="text-sm leading-6 text-black/65 dark:text-white/70">{s.desc}</p>
                   <div className="grid grid-cols-3 gap-3 text-sm">
                     <div><div className="text-[11px] font-semibold text-black/50 dark:text-white/55">Sesión</div><div className="font-bold">{s.durationMin} min</div></div>
                     <div><div className="text-[11px] font-semibold text-black/50 dark:text-white/55">Preparación</div><div className="font-bold">{s.bufferMin} min</div></div>
                     <div><div className="text-[11px] font-semibold text-black/50 dark:text-white/55">Desde</div><div className="font-bold">{s.priceFrom}</div></div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    <LinkButton href="/agenda" size="sm" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Quiero este tratamiento</LinkButton>
+                    <LeadCTA interest="servicios" label="Consultar" variant="outline" className="!h-9" />
                   </div>
                 </CardContent>
               </Card>
@@ -101,20 +122,22 @@ export default function ServicesPage() {
         </section>
 
         <section className="grid gap-4 rounded-[32px] border border-black/5 bg-white/75 p-5 shadow-soft dark:border-white/10 dark:bg-graphite-900/70 sm:p-6 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
-          <div className="grid gap-2">
-            <h2 className="text-xl font-extrabold sm:text-2xl">¿Lista para empezar?</h2>
-            <p className="max-w-2xl text-sm text-black/65 dark:text-white/70">Agendá tu valoración o escribinos por WhatsApp para ayudarte a elegir el tratamiento ideal según tu objetivo estético.</p>
+          <div className="grid gap-3">
+            <Badge className="w-fit bg-[#eef8fb] text-graphite-950">CTA contextual</Badge>
+            <h2 className="text-xl font-extrabold sm:text-2xl">¿No sabés por cuál empezar?</h2>
+            <p className="max-w-2xl text-sm text-black/65 dark:text-white/70">Agendá una valoración estética y te ayudamos a elegir el tratamiento ideal según tu piel, tu objetivo y el resultado que querés lograr.</p>
             <div className="flex flex-wrap justify-start gap-2 pt-2">
               <LinkButton href="/agenda" className="bg-cyanSoft-400 text-graphite-950 hover:bg-cyanSoft-300">Agendá tu valoración</LinkButton>
-              <LeadCTA interest="servicios" label="Consultar por WhatsApp" variant="outline" />
+              <LeadCTA interest="servicios" label="Quiero asesoramiento por WhatsApp" variant="outline" />
             </div>
+            <p className="text-xs text-black/50 dark:text-white/55">Respuesta simple, orientación profesional y reserva rápida desde el primer contacto.</p>
           </div>
           <MediaCard
             src="/brand/aesthetic/contact-lounge.svg"
             alt="Recepción serena de clínica estética premium"
             eyebrow="Consulta y seguimiento"
             title="Una reserva simple, clara y acompañada"
-            description="Desde el primer mensaje hasta tu llegada a clínica, la experiencia busca ser prolija, cálida y confiable."
+            description="Desde el primer mensaje hasta tu llegada a clínica, todo está pensado para que avanzar se sienta fácil y seguro."
             aspectClassName="aspect-[4/3]"
             sizes="(min-width: 1024px) 34vw, 100vw"
           />

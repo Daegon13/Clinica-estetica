@@ -6,7 +6,8 @@ export type ServiceId =
   | "desparasitacion"
   | "control"
   | "cirugia"
-  | "estetica";
+  | "estetica"
+  | "corporal";
 
 export type AppointmentStatus = "pendiente" | "confirmado" | "cancelado" | "atendido";
 

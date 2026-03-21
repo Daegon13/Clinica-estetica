@@ -69,22 +69,22 @@ export const siteContent = {
   services: [
     {
       id: "consulta",
-      category: "valoracion",
-      name: "Evaluación estética",
+      category: "diagnóstico",
+      name: "Valoración estética",
       durationMin: 40,
       bufferMin: 10,
       priceFrom: "$ 1.200",
-      description: "Diagnóstico facial o corporal, objetivos y plan de tratamiento personalizado.",
+      description: "El primer paso para elegir bien: analizamos tu piel, tus objetivos y armamos un plan realista para vos.",
       icon: "consulta"
     },
     {
       id: "control",
-      category: "laser",
+      category: "láser",
       name: "Depilación láser",
       durationMin: 45,
       bufferMin: 10,
       priceFrom: "$ 1.800",
-      description: "Tecnología segura para reducir vello no deseado con sesiones planificadas.",
+      description: "Reducí el vello con sesiones planificadas, comodidad durante el proceso y una piel más suave en el tiempo.",
       icon: "turnos"
     },
     {
@@ -94,38 +94,48 @@ export const siteContent = {
       durationMin: 60,
       bufferMin: 15,
       priceFrom: "$ 1.600",
-      description: "Higiene, extracción, hidratación y glow inmediato para una piel más uniforme.",
+      description: "Purificá, desobstruí e iluminá tu piel en una sesión ideal para recuperar frescura y buena textura.",
       icon: "vacunacion"
     },
     {
       id: "desparasitacion",
-      category: "facial",
+      category: "renovación",
       name: "Peelings",
       durationMin: 45,
       bufferMin: 10,
       priceFrom: "$ 1.500",
-      description: "Renovación de la piel con protocolos personalizados según textura, manchas y luminosidad.",
+      description: "Mejorá luminosidad, manchas y textura con peelings ajustados a lo que tu piel necesita hoy.",
       icon: "laboratorio"
     },
     {
       id: "cirugia",
-      category: "rejuvenecimiento",
+      category: "antiage",
       name: "Rejuvenecimiento facial",
       durationMin: 60,
       bufferMin: 15,
       priceFrom: "A cotizar",
-      description: "Planes combinados para firmeza, hidratación, textura y prevención del envejecimiento.",
+      description: "Protocolos para suavizar signos de cansancio y devolver firmeza, hidratación y aspecto descansado.",
       icon: "cirugia"
     },
     {
       id: "estetica",
-      category: "premium",
-      name: "Armonización facial y tratamientos corporales",
+      category: "armonización",
+      name: "Armonización facial",
       durationMin: 75,
       bufferMin: 15,
       priceFrom: "A cotizar",
-      description: "Abordaje integral para realzar facciones y trabajar contorno corporal con criterio profesional.",
+      description: "Realzá facciones con resultados equilibrados, naturales y pensados para respetar tu expresión.",
       icon: "grooming"
+    },
+    {
+      id: "corporal",
+      category: "corporal",
+      name: "Tratamientos corporales",
+      durationMin: 60,
+      bufferMin: 15,
+      priceFrom: "A cotizar",
+      description: "Protocolos personalizados para contorno, textura y bienestar, según tu objetivo y tu ritmo.",
+      icon: "control"
     }
   ],
   team: [
