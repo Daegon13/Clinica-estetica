@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { BRAND } from "@/lib/data";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -9,5 +10,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
+  const enabled = ["1", "true"].includes((process.env.NEXT_PUBLIC_DEMO_TOOLS ?? "").toLowerCase());
+  if (!enabled) notFound();
   return children;
 }
